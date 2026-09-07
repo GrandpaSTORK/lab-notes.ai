@@ -43,6 +43,9 @@ next-env.d.ts
 # Local agent settings
 .claude/settings.local.json
 
+# Generated GAIA evidence and runner diagnostics
+/.local/gaia/
+
 # Local Superpowers working specifications
 /docs/superpowers/
 
