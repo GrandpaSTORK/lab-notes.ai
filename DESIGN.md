@@ -191,4 +191,10 @@ No runtime model calls, production data pipeline, API key, account, upload, data
 
 ## 20. Explicit non-goals
 
+The bounded BUILD-001B exception is a local human-review route at
+`/gaia/policy-evidence`. It uses the existing shell and tokens, equally available
+dispositions with no default, visible evidence boundaries, separate local review
+history and a JSON snapshot. It does not introduce a public governance workflow
+or change the atlas/playbook design. See `docs/builds/BUILD-001B.md`.
+
 No published recommended or ranked applications, hosted reference implementations, professional-authority claims for skills, autonomous production deployment workflows inside skills, runtime model calls, production integrations, person-level stand-ins where irresponsible, risk scores, maturity ladders, approval workflows, governance dashboards, dark theme, plugin packaging, or broad unrelated refactor.

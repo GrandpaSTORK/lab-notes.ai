@@ -58,4 +58,9 @@ Each playbook records the published sources investigated, with links. The projec
 
 ## Accessibility & Inclusion
 
+BUILD-001B adds a local-only Policy Evidence review proof at `/gaia/policy-evidence`.
+It reviews validated synthetic BUILD-001A artifacts, preserves human judgments in
+separate ignored JSON files, and exports an evidence snapshot. It introduces no
+runtime model call or deployed service. See `docs/builds/BUILD-001B.md` for scope.
+
 The presentation layer is for everyone. Content uses plain English, avoids unexplained AI and government jargon, works across keyboard and assistive-technology navigation, and does not rely on colour alone. Meaningful interactive states have text and semantic equivalents, and all core content and actions remain available at 200% zoom.
