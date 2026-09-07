@@ -63,4 +63,10 @@ It reviews validated synthetic BUILD-001A artifacts, preserves human judgments i
 separate ignored JSON files, and exports an evidence snapshot. It introduces no
 runtime model call or deployed service. See `docs/builds/BUILD-001B.md` for scope.
 
+BUILD-001C adds a separate, local unseen-dissent challenge to that review route.
+An explicit CLI command challenges the synthetic evidence using the existing
+Codex login; the application only reads validated ignored artifacts. Challenges
+do not change machine assessments, human reviews, or snapshot status. A separate
+synthetic adversarial fixture is test-only. See `docs/builds/BUILD-001C.md`.
+
 The presentation layer is for everyone. Content uses plain English, avoids unexplained AI and government jargon, works across keyboard and assistive-technology navigation, and does not rely on colour alone. Meaningful interactive states have text and semantic equivalents, and all core content and actions remain available at 200% zoom.

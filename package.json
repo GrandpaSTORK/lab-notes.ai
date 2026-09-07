@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "gaia:dissent": "tsx scripts/gaia/generate-policy-dissent.ts",
     "gaia:generate": "tsx scripts/gaia/generate-policy-evidence.ts",
     "dev": "next dev",
     "build": "next build",

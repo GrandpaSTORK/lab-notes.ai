@@ -3,6 +3,7 @@ import { headers } from "next/headers"
 import { ProvenanceLabel } from "@/components/site/provenance-label"
 import { PolicyEvidenceReview } from "@/features/gaia/policy-evidence-review"
 import { loadReviewPage } from "@/lib/gaia/policy-evidence-review-store"
+import { loadDissent } from "@/lib/gaia/policy-evidence-dissent-store"
 import { pageMetadata } from "@/lib/site"
 import { saveReviewAction } from "./actions"
 
@@ -39,7 +40,7 @@ export default async function PolicyEvidencePage() {
       </header>
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8">
         {loaded ? <PolicyEvidenceReview key={loaded.presentation.proofSha256} initialPresentation={loaded.presentation}
-          storagePath={loaded.storagePath} warnings={loaded.warnings} reviewError={loaded.reviewError} saveAction={saveReviewAction} /> : (
+          dissent={loadDissent(process.cwd(), loaded.runId, loaded.presentation.proofSha256)} storagePath={loaded.storagePath} warnings={loaded.warnings} reviewError={loaded.reviewError} saveAction={saveReviewAction} /> : (
           <section aria-labelledby="proof-unavailable" className="border-2 border-peat bg-surface p-6">
             <h2 id="proof-unavailable" className="text-2xl">No valid proof available</h2>
             <p className="mt-3" role={issue ? "alert" : undefined}>{issue ?? "No BUILD-001A proof artifact exists yet. No candidate data has been fabricated."}</p>

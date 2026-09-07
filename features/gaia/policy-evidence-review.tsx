@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, type FormEvent } from "react"
+import { UnseenDissent } from "./policy-evidence-dissent"
 
 import type { Disposition, ReviewActionResult, ReviewPresentation, ReviewRequest } from "@/lib/gaia/policy-evidence-review"
 
@@ -127,7 +128,8 @@ function CandidateEvidence({ candidate }: { candidate: Candidate }) {
   )
 }
 
-export function PolicyEvidenceReview({ initialPresentation, storagePath, warnings, reviewError, saveAction }: {
+export function PolicyEvidenceReview({ initialPresentation, storagePath, warnings, reviewError, saveAction, dissent }: {
+  dissent?: Parameters<typeof UnseenDissent>[0]["dissent"]
   initialPresentation: ReviewPresentation
   storagePath: string
   warnings: string[]
@@ -192,6 +194,7 @@ export function PolicyEvidenceReview({ initialPresentation, storagePath, warning
             <p className="mt-2 text-sm">Saved {candidate.review.reviewedAt} · review revision {candidate.review.reviewRevision}</p>
           </div>}
           <CandidateEvidence candidate={candidate} />
+          <UnseenDissent candidateId={candidate.id} dissent={dissent} />
           <details className="mt-4">
             <summary className="min-h-11 cursor-pointer py-2 font-bold">Evidence limitations — {candidate.id}</summary>
             <ul className="mt-2 list-disc space-y-2 pl-5">{candidate.limitations.map((limit, index) => <li key={index}>{limit}</li>)}</ul>

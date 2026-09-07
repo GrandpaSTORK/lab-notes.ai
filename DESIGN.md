@@ -197,4 +197,10 @@ dispositions with no default, visible evidence boundaries, separate local review
 history and a JSON snapshot. It does not introduce a public governance workflow
 or change the atlas/playbook design. See `docs/builds/BUILD-001B.md`.
 
+BUILD-001C extends each local candidate with a separate unseen-dissent section,
+using the same tokens, native testimony disclosures, visible original relationships,
+and WITNESS limitations. Missing, invalid, zero-finding, and potential-finding states
+are distinct. Challenge evidence never selects a human disposition or changes the
+Trust Evidence Snapshot. See `docs/builds/BUILD-001C.md`.
+
 No published recommended or ranked applications, hosted reference implementations, professional-authority claims for skills, autonomous production deployment workflows inside skills, runtime model calls, production integrations, person-level stand-ins where irresponsible, risk scores, maturity ladders, approval workflows, governance dashboards, dark theme, plugin packaging, or broad unrelated refactor.
