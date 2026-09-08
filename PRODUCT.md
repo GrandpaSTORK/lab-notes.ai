@@ -85,4 +85,10 @@ authority remain separate from human review and unresolved dissent. Current evid
 must match before exclusive local creation; existing artifacts are never overwritten.
 GAIA does not make, recommend or validate the decision. See `docs/builds/BUILD-001F.md`.
 
+BUILD-001G adds a read-only Decision Evidence Change Notice for a saved decision.
+It validates historical embedded evidence separately from current local inputs,
+compares exactly four bindings, and preserves access when current evidence is
+different, invalid or unavailable. It does not decide whether the decision should
+change and writes no artifact. See `docs/builds/BUILD-001G.md`.
+
 The presentation layer is for everyone. Content uses plain English, avoids unexplained AI and government jargon, works across keyboard and assistive-technology navigation, and does not rely on colour alone. Meaningful interactive states have text and semantic equivalents, and all core content and actions remain available at 200% zoom.

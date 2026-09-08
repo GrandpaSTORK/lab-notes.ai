@@ -224,4 +224,11 @@ or dissent. Historical evidence blocks new recording as current. Existing tokens
 native disclosures and full underlying testimony remain available. No accountable
 real-world policy owner is invented. See `docs/builds/BUILD-001F.md`.
 
+BUILD-001G associates a read-only change notice with one selected historical
+decision. A four-row table shows recorded/current states and fingerprints beside
+explicit mechanical comparison boundaries. Native disclosures retain complete
+frozen evidence even when current validation fails. It adds no decision action,
+recommendation or persistent artifact. The comparison names its current run and
+does not silently fall back to another proof. See `docs/builds/BUILD-001G.md`.
+
 No published recommended or ranked applications, hosted reference implementations, professional-authority claims for skills, autonomous production deployment workflows inside skills, runtime model calls, production integrations, person-level stand-ins where irresponsible, risk scores, maturity ladders, approval workflows, governance dashboards, dark theme, plugin packaging, or broad unrelated refactor.

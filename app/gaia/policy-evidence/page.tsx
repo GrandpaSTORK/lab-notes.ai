@@ -14,6 +14,8 @@ import { DecisionEvidenceBrief } from "@/features/gaia/policy-evidence-brief"
 import { HumanDecisionPanel } from "@/features/gaia/policy-evidence-decision-panel"
 import { loadDecisionPage } from "@/lib/gaia/policy-evidence-decision-store"
 import { saveDecisionAction } from "./decision-actions"
+import { loadDecisionChangePage } from "@/lib/gaia/policy-evidence-change-store"
+import { DecisionEvidenceChange } from "@/features/gaia/policy-evidence-change"
 
 export const runtime = "nodejs"
 export const metadata = {
@@ -36,6 +38,9 @@ export default async function PolicyEvidencePage({ searchParams }: { searchParam
   }
   const briefPage = loaded ? loadDecisionBrief(process.cwd(), loaded.runId, loaded.presentation.proofSha256, query.brief, query.briefRun) : null
   const decisionPage = briefPage ? loadDecisionPage(process.cwd(), briefPage) : null
+  // Historical access must survive a failed current-proof gate. G performs no writes.
+  const changePage = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host)
+    ? loadDecisionChangePage(process.cwd(), query.decisionRun, query.decision, query.evidenceRun) : null
   return (
     <article>
       <header className="border-y-2 border-peat bg-surface px-4 py-10 sm:px-8 lg:px-12">
@@ -54,6 +59,7 @@ export default async function PolicyEvidencePage({ searchParams }: { searchParam
         <HumanDecisionPanel key={`${decisionPage.selection?.snapshotSha256}-${decisionPage.selection?.briefSha256}-${decisionPage.canRecord}`}
           page={decisionPage} saveAction={saveDecisionAction} />
       </div>}
+      {changePage && <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8"><DecisionEvidenceChange page={changePage} /></div>}
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8">
         {loaded ? <PolicyEvidenceReview key={loaded.presentation.proofSha256} initialPresentation={loaded.presentation}
           dissent={loadDissent(process.cwd(), loaded.runId, loaded.presentation.proofSha256)} storagePath={loaded.storagePath} warnings={loaded.warnings} reviewError={loaded.reviewError} saveAction={saveReviewAction} /> : (
