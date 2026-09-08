@@ -1,0 +1,5 @@
+export const DECISION_BOUNDARY = "The brief informs a decision. The human makes the decision. The Decision Record preserves what was decided and why."
+export const DECISION_AUTHORITY = "This record preserves a human decision made with reference to the identified evidence. GAIA did not make, recommend, approve, or validate the decision."
+export const DECISION_LIMIT = "Recording a decision does not resolve dissent, establish semantic correctness, or upgrade the evidence supporting it."
+export const DECISION_ACKNOWLEDGEMENT = "I acknowledge that unresolved evidence remains unresolved, including potential or undetected dissent and the frozen evidence limitations."
+export const DECISION_DISCLOSURE = "SYNTHETIC DEMONSTRATION — decision, rationale, decision maker, role and authority are synthetic test data, not an accountable real-world policy decision."

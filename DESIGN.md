@@ -216,4 +216,12 @@ equal structural emphasis; native disclosures retain complete testimony, provena
 and full frozen evidence. Historical snapshots are explicitly labelled. No evidence
 artifact or existing A/B/C/D authority is changed. See `docs/builds/BUILD-001E.md`.
 
+BUILD-001F places a separate Human Decision Record section immediately after the
+brief. Blank native controls require human decision text, rationale, synthetic
+maker/role/authority values and an explicit unresolved-evidence acknowledgement.
+Saved records expose the exact decision and frozen trace without changing review
+or dissent. Historical evidence blocks new recording as current. Existing tokens,
+native disclosures and full underlying testimony remain available. No accountable
+real-world policy owner is invented. See `docs/builds/BUILD-001F.md`.
+
 No published recommended or ranked applications, hosted reference implementations, professional-authority claims for skills, autonomous production deployment workflows inside skills, runtime model calls, production integrations, person-level stand-ins where irresponsible, risk scores, maturity ladders, approval workflows, governance dashboards, dark theme, plugin packaging, or broad unrelated refactor.

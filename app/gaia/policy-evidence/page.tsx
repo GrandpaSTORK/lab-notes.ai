@@ -11,6 +11,9 @@ import { TrustSnapshotPanel } from "@/features/gaia/policy-evidence-snapshot-pan
 import { loadSnapshotPage } from "@/lib/gaia/policy-evidence-snapshot-store"
 import { loadDecisionBrief } from "@/lib/gaia/policy-evidence-brief-store"
 import { DecisionEvidenceBrief } from "@/features/gaia/policy-evidence-brief"
+import { HumanDecisionPanel } from "@/features/gaia/policy-evidence-decision-panel"
+import { loadDecisionPage } from "@/lib/gaia/policy-evidence-decision-store"
+import { saveDecisionAction } from "./decision-actions"
 
 export const runtime = "nodejs"
 export const metadata = {
@@ -31,6 +34,8 @@ export default async function PolicyEvidencePage({ searchParams }: { searchParam
       issue = "No usable proof could be loaded. Source integrity or artifact validation failed, or the local files could not be read."
     }
   }
+  const briefPage = loaded ? loadDecisionBrief(process.cwd(), loaded.runId, loaded.presentation.proofSha256, query.brief, query.briefRun) : null
+  const decisionPage = briefPage ? loadDecisionPage(process.cwd(), briefPage) : null
   return (
     <article>
       <header className="border-y-2 border-peat bg-surface px-4 py-10 sm:px-8 lg:px-12">
@@ -44,8 +49,10 @@ export default async function PolicyEvidencePage({ searchParams }: { searchParam
           <p className="mt-5 text-peat-muted">Built on <a className="font-bold underline" href="https://github.com/Hypership-Software/lab-notes.ai">Hypership’s lab-notes.ai</a> and its build-policy-evidence foundation.</p>
         </div>
       </header>
-      {loaded && <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8">
-        <DecisionEvidenceBrief page={loadDecisionBrief(process.cwd(), loaded.runId, loaded.presentation.proofSha256, query.brief, query.briefRun)} />
+      {briefPage && decisionPage && <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8">
+        <DecisionEvidenceBrief page={briefPage} />
+        <HumanDecisionPanel key={`${decisionPage.selection?.snapshotSha256}-${decisionPage.selection?.briefSha256}-${decisionPage.canRecord}`}
+          page={decisionPage} saveAction={saveDecisionAction} />
       </div>}
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8">
         {loaded ? <PolicyEvidenceReview key={loaded.presentation.proofSha256} initialPresentation={loaded.presentation}

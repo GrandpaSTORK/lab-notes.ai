@@ -79,4 +79,10 @@ BUILD-001D snapshot. It preserves exact evidence and human-review boundaries,
 distinguishes historical input validity from current local agreement, and performs
 no model call or artifact write. See `docs/builds/BUILD-001E.md`.
 
+BUILD-001F records a human-authored synthetic demonstration decision against one
+exact frozen brief and snapshot. Decision text, rationale and supplied demonstration
+authority remain separate from human review and unresolved dissent. Current evidence
+must match before exclusive local creation; existing artifacts are never overwritten.
+GAIA does not make, recommend or validate the decision. See `docs/builds/BUILD-001F.md`.
+
 The presentation layer is for everyone. Content uses plain English, avoids unexplained AI and government jargon, works across keyboard and assistive-technology navigation, and does not rely on colour alone. Meaningful interactive states have text and semantic equivalents, and all core content and actions remain available at 200% zoom.
