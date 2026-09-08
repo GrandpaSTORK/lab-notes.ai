@@ -203,4 +203,10 @@ and WITNESS limitations. Missing, invalid, zero-finding, and potential-finding s
 are distinct. Challenge evidence never selects a human disposition or changes the
 Trust Evidence Snapshot. See `docs/builds/BUILD-001C.md`.
 
+BUILD-001D adds a separate freeze-and-inspect section to the local route, retaining
+the earlier BUILD-001B export. One selected candidate exposes the original evidence,
+saved human judgment, potential dissent, input fingerprints and four explicit
+epistemic classes. Native disclosures keep complete testimony inspectable. A frozen
+snapshot has no authority over its inputs. See `docs/builds/BUILD-001D.md`.
+
 No published recommended or ranked applications, hosted reference implementations, professional-authority claims for skills, autonomous production deployment workflows inside skills, runtime model calls, production integrations, person-level stand-ins where irresponsible, risk scores, maturity ladders, approval workflows, governance dashboards, dark theme, plugin packaging, or broad unrelated refactor.

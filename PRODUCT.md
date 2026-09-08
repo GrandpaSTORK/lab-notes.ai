@@ -69,4 +69,9 @@ Codex login; the application only reads validated ignored artifacts. Challenges
 do not change machine assessments, human reviews, or snapshot status. A separate
 synthetic adversarial fixture is test-only. See `docs/builds/BUILD-001C.md`.
 
+BUILD-001D composes one candidate into a separate local, portable Trust Evidence
+Snapshot from validated A/B/C inputs. It embeds their exact bytes and fingerprints,
+preserves human dispositions and unresolved dissent, and invokes no model. Missing
+optional artifacts are explicit; invalid inputs block creation. See `docs/builds/BUILD-001D.md`.
+
 The presentation layer is for everyone. Content uses plain English, avoids unexplained AI and government jargon, works across keyboard and assistive-technology navigation, and does not rely on colour alone. Meaningful interactive states have text and semantic equivalents, and all core content and actions remain available at 200% zoom.

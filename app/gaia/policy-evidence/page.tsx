@@ -6,6 +6,9 @@ import { loadReviewPage } from "@/lib/gaia/policy-evidence-review-store"
 import { loadDissent } from "@/lib/gaia/policy-evidence-dissent-store"
 import { pageMetadata } from "@/lib/site"
 import { saveReviewAction } from "./actions"
+import { createSnapshotAction } from "./snapshot-actions"
+import { TrustSnapshotPanel } from "@/features/gaia/policy-evidence-snapshot-panel"
+import { loadSnapshotPage } from "@/lib/gaia/policy-evidence-snapshot-store"
 
 export const runtime = "nodejs"
 export const metadata = {
@@ -49,6 +52,10 @@ export default async function PolicyEvidencePage() {
           </section>
         )}
       </div>
+      {loaded && <div className="mx-auto max-w-6xl px-4 pb-8 sm:px-8">
+        <TrustSnapshotPanel key={`${loaded.runId}-${loaded.presentation.proofSha256}-${loaded.presentation.reviewRevision}`}
+          page={loadSnapshotPage(process.cwd(), loaded.runId, loaded.presentation.proofSha256)} createAction={createSnapshotAction} />
+      </div>}
     </article>
   )
 }
