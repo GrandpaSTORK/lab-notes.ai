@@ -9,6 +9,8 @@ import { saveReviewAction } from "./actions"
 import { createSnapshotAction } from "./snapshot-actions"
 import { TrustSnapshotPanel } from "@/features/gaia/policy-evidence-snapshot-panel"
 import { loadSnapshotPage } from "@/lib/gaia/policy-evidence-snapshot-store"
+import { loadDecisionBrief } from "@/lib/gaia/policy-evidence-brief-store"
+import { DecisionEvidenceBrief } from "@/features/gaia/policy-evidence-brief"
 
 export const runtime = "nodejs"
 export const metadata = {
@@ -16,9 +18,10 @@ export const metadata = {
   robots: { index: false, follow: false },
 }
 
-export default async function PolicyEvidencePage() {
+export default async function PolicyEvidencePage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
   // Request-time loading: never bake ignored proof/review files into static pages.
   const host = (await headers()).get("host") ?? ""
+  const query = await searchParams
   let loaded: ReturnType<typeof loadReviewPage> = null
   let issue: string | null = null
   if (!/^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host)) {
@@ -41,6 +44,9 @@ export default async function PolicyEvidencePage() {
           <p className="mt-5 text-peat-muted">Built on <a className="font-bold underline" href="https://github.com/Hypership-Software/lab-notes.ai">Hypership’s lab-notes.ai</a> and its build-policy-evidence foundation.</p>
         </div>
       </header>
+      {loaded && <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8">
+        <DecisionEvidenceBrief page={loadDecisionBrief(process.cwd(), loaded.runId, loaded.presentation.proofSha256, query.brief, query.briefRun)} />
+      </div>}
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8">
         {loaded ? <PolicyEvidenceReview key={loaded.presentation.proofSha256} initialPresentation={loaded.presentation}
           dissent={loadDissent(process.cwd(), loaded.runId, loaded.presentation.proofSha256)} storagePath={loaded.storagePath} warnings={loaded.warnings} reviewError={loaded.reviewError} saveAction={saveReviewAction} /> : (

@@ -209,4 +209,11 @@ saved human judgment, potential dissent, input fingerprints and four explicit
 epistemic classes. Native disclosures keep complete testimony inspectable. A frozen
 snapshot has no authority over its inputs. See `docs/builds/BUILD-001D.md`.
 
+BUILD-001E places a concise Decision Evidence Brief before the local working
+review. Frozen wording, disposition, coverage, dissent state, unresolved boundaries
+and a trace link are visible together. Human review and unresolved limitations use
+equal structural emphasis; native disclosures retain complete testimony, provenance
+and full frozen evidence. Historical snapshots are explicitly labelled. No evidence
+artifact or existing A/B/C/D authority is changed. See `docs/builds/BUILD-001E.md`.
+
 No published recommended or ranked applications, hosted reference implementations, professional-authority claims for skills, autonomous production deployment workflows inside skills, runtime model calls, production integrations, person-level stand-ins where irresponsible, risk scores, maturity ladders, approval workflows, governance dashboards, dark theme, plugin packaging, or broad unrelated refactor.
