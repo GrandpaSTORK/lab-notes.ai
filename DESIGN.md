@@ -240,4 +240,11 @@ below through anchors. READY/PARTIAL/BLOCKED describe presentation availability
 only. Human demo-comprehension review and browser accessibility acceptance remain
 separate from mechanical tests. See `docs/builds/BUILD-001H.md`.
 
-No published recommended or ranked applications, hosted reference implementations, professional-authority claims for skills, autonomous production deployment workflows inside skills, runtime model calls, production integrations, person-level stand-ins where irresponsible, risk scores, maturity ladders, approval workflows, governance dashboards, dark theme, plugin packaging, or broad unrelated refactor.
+SHARE-PACK-001 reuses the H interface for a hosted read-only synthetic demo.
+The synthetic disclosure and all evidence/navigation boundaries remain visible.
+Hosted mode omits write controls and explicitly states that decision recording,
+review saving and snapshot creation are disabled; server actions enforce the same
+restriction. Saved evidence remains inspectable. No new visual language or
+semantic state is introduced. See `docs/builds/SHARE-PACK-001.md`.
+
+No published recommended or ranked applications, hosted reference implementations beyond the bounded synthetic demo above, professional-authority claims for skills, autonomous production deployment workflows inside skills, runtime model calls, production integrations, person-level stand-ins where irresponsible, risk scores, maturity ladders, approval workflows, governance dashboards, dark theme, plugin packaging, or broad unrelated refactor.

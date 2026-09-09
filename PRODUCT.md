@@ -98,4 +98,11 @@ Presentation availability is not decision readiness. New leadership questions
 are labelled presentation prompts, never testimony or recommendations. It adds
 no model call, evidence artifact or authority. See `docs/builds/BUILD-001H.md`.
 
+SHARE-PACK-001 permits a hosted read-only synthetic Policy Evidence demonstration.
+Vercel or explicit hosted mode reads byte-identical packaged H evidence through
+the existing validators. It cannot save reviews, freeze snapshots or record
+decisions. Local mode retains its existing evidence directory and controls.
+This is a demonstration packaging exception, not BUILD-001I or a live consultation
+service. See `docs/builds/SHARE-PACK-001.md`.
+
 The presentation layer is for everyone. Content uses plain English, avoids unexplained AI and government jargon, works across keyboard and assistive-technology navigation, and does not rely on colour alone. Meaningful interactive states have text and semantic equivalents, and all core content and actions remain available at 200% zoom.

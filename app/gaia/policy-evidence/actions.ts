@@ -5,8 +5,10 @@ import { ZodError } from "zod"
 
 import { saveLocalReview } from "@/lib/gaia/policy-evidence-review-store"
 import type { ReviewActionResult } from "@/lib/gaia/policy-evidence-review"
+import { hostedDemoMode } from "@/lib/gaia/policy-evidence-hosted-mode"
 
 export async function saveReviewAction(request: unknown): Promise<ReviewActionResult> {
+  if (hostedDemoMode()) return { ok: false, message: "Hosted demonstration — read-only. Review saving is disabled." }
   const host = (await headers()).get("host") ?? ""
   if (!/^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host)) {
     return { ok: false, message: "Human review is available only through the local application." }

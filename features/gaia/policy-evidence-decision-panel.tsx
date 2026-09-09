@@ -6,8 +6,9 @@ import type { DecisionActionResult, DecisionPage, SavedDecision } from "@/lib/ga
 import { DECISION_ACKNOWLEDGEMENT, DECISION_AUTHORITY, DECISION_BOUNDARY, DECISION_DISCLOSURE, DECISION_LIMIT } from "@/lib/gaia/policy-evidence-decision-boundary"
 import { DecisionRecordEvidence } from "./policy-evidence-decision"
 import { BackToExecutiveSnapshot } from "./policy-evidence-navigation"
+import { HOSTED_READ_ONLY } from "@/lib/gaia/policy-evidence-hosted-mode"
 
-export function HumanDecisionPanel({ page, saveAction }: { page: DecisionPage; saveAction: (request: DecisionRequest) => Promise<DecisionActionResult> }) {
+export function HumanDecisionPanel({ page, saveAction, readOnly = false }: { page: DecisionPage; readOnly?: boolean; saveAction: (request: DecisionRequest) => Promise<DecisionActionResult> }) {
   const [created, setCreated] = useState<SavedDecision | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [pending, startTransition] = useTransition()
@@ -15,7 +16,7 @@ export function HumanDecisionPanel({ page, saveAction }: { page: DecisionPage; s
   const decisionId = useRef<string | null>(null)
   function record(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (!page.selection || !page.canRecord || pending || created) return
+    if (readOnly || !page.selection || !page.canRecord || pending || created) return
     const data = new FormData(event.currentTarget), text = (key: string) => String(data.get(key) ?? "")
     if (data.get("acknowledgement") !== "on") { setError("Acknowledge the unresolved evidence before recording."); return }
     decisionId.current ??= crypto.randomUUID()
@@ -34,6 +35,7 @@ export function HumanDecisionPanel({ page, saveAction }: { page: DecisionPage; s
   return <section aria-labelledby="human-decision-title" className="mt-8 min-w-0 border-y-2 border-peat py-6">
     <h2 id="human-decision-title" className="font-display text-3xl">BUILD-001F — Human Decision Record</h2>
     <BackToExecutiveSnapshot />
+    {readOnly && <p className="mt-3 font-bold">{HOSTED_READ_ONLY}</p>}
     <p className="mt-4 text-lg font-bold">{DECISION_BOUNDARY}</p>
     <p className="mt-3">{DECISION_AUTHORITY}</p>
     <p className="mt-3">{DECISION_LIMIT}</p>
@@ -47,7 +49,7 @@ export function HumanDecisionPanel({ page, saveAction }: { page: DecisionPage; s
     </div>}
     {page.issue && <p role="alert" className="mt-4 border-2 border-peat p-4">{page.issue}</p>}
     {page.warnings.map((warning) => <p key={warning} className="mt-3">{warning}</p>)}
-    {page.canRecord && page.selection && !created && <form onSubmit={record} className="mt-6 space-y-4">
+    {!readOnly && page.canRecord && page.selection && !created && <form onSubmit={record} className="mt-6 space-y-4">
       <p>Enter your own synthetic demonstration decision. All fields are required. No decision or rationale is suggested.</p>
       <fieldset disabled={pending} className="space-y-4 disabled:opacity-70">
         <legend className="sr-only">Human-authored synthetic decision</legend>

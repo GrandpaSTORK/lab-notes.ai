@@ -3,8 +3,10 @@
 import { headers } from "next/headers"
 import { decisionRequestSchema } from "@/lib/gaia/policy-evidence-decision"
 import { saveDecision, type DecisionActionResult } from "@/lib/gaia/policy-evidence-decision-store"
+import { hostedDemoMode, HOSTED_READ_ONLY } from "@/lib/gaia/policy-evidence-hosted-mode"
 
 export async function saveDecisionAction(input: unknown): Promise<DecisionActionResult> {
+  if (hostedDemoMode()) return { ok: false, message: HOSTED_READ_ONLY }
   const host = (await headers()).get("host") ?? ""
   if (!/^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host)) return { ok: false, message: "Decision recording is available only through the local application." }
   try { return { ok: true, saved: saveDecision(process.cwd(), decisionRequestSchema.parse(input)) } } catch {

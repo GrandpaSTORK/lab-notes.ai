@@ -19,6 +19,8 @@ import { DecisionEvidenceChange } from "@/features/gaia/policy-evidence-change"
 import { loadExecutivePage } from "@/lib/gaia/policy-evidence-executive-store"
 import { ExecutiveEvidenceLayout, ExecutiveSourceEvidence } from "@/features/gaia/policy-evidence-executive"
 import { BackToExecutiveSnapshot } from "@/features/gaia/policy-evidence-navigation"
+import { evidenceLocation, assertDemoPackage } from "@/lib/gaia/policy-evidence-demo-root"
+import { HOSTED_READ_ONLY } from "@/lib/gaia/policy-evidence-hosted-mode"
 
 export const runtime = "nodejs"
 export const metadata = {
@@ -30,24 +32,33 @@ export default async function PolicyEvidencePage({ searchParams }: { searchParam
   // Request-time loading: never bake ignored proof/review files into static pages.
   const host = (await headers()).get("host") ?? ""
   const query = await searchParams
+  const location = evidenceLocation(process.cwd())
+  const root = location.root, hosted = location.hosted
+  let readable = hosted || /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host)
   let loaded: ReturnType<typeof loadReviewPage> = null
   let issue: string | null = null
-  if (!/^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host)) {
+  if (hosted) {
+    try { assertDemoPackage(root) } catch {
+      readable = false
+      issue = "Packaged synthetic evidence is missing or differs from the sealed demonstration. No fallback, repair or regeneration was attempted."
+    }
+  }
+  if (!readable && !issue) {
     issue = "This proof is available only through the local application."
-  } else {
-    try { loaded = loadReviewPage(process.cwd()) } catch {
+  } else if (readable) {
+    try { loaded = loadReviewPage(root) } catch {
       issue = "No usable proof could be loaded. Source integrity or artifact validation failed, or the local files could not be read."
     }
   }
-  const briefPage = loaded ? loadDecisionBrief(process.cwd(), loaded.runId, loaded.presentation.proofSha256, query.brief, query.briefRun) : null
-  const decisionPage = briefPage ? loadDecisionPage(process.cwd(), briefPage) : null
+  const briefPage = loaded ? loadDecisionBrief(root, loaded.runId, loaded.presentation.proofSha256, query.brief, query.briefRun) : null
+  const decisionPage = briefPage ? loadDecisionPage(root, briefPage) : null
   // Historical access must survive a failed current-proof gate. G performs no writes.
-  const changePage = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host)
-    ? loadDecisionChangePage(process.cwd(), query.decisionRun, query.decision, query.evidenceRun) : null
-  const executivePage = loadExecutivePage(process.cwd(), briefPage, decisionPage, changePage)
+  const changePage = readable ? loadDecisionChangePage(root, query.decisionRun, query.decision, query.evidenceRun) : null
+  const executivePage = loadExecutivePage(root, briefPage, decisionPage, changePage)
   return (
     <article>
       <ExecutiveEvidenceLayout page={executivePage}>
+      {hosted && <p className="mx-auto max-w-6xl px-4 py-4 font-bold">{HOSTED_READ_ONLY} Review saving and snapshot creation are also disabled.</p>}
       <header id="policy-evidence-detail" className="border-y-2 border-peat bg-surface px-4 py-10 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-6xl">
           <BackToExecutiveSnapshot />
@@ -63,23 +74,23 @@ export default async function PolicyEvidencePage({ searchParams }: { searchParam
       {briefPage && decisionPage && <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8">
         <DecisionEvidenceBrief page={briefPage} />
         <div id="executive-decision-evidence"><HumanDecisionPanel key={`${decisionPage.selection?.snapshotSha256}-${decisionPage.selection?.briefSha256}-${decisionPage.canRecord}`}
-          page={decisionPage} saveAction={saveDecisionAction} /></div>
+          page={decisionPage} readOnly={hosted} saveAction={saveDecisionAction} /></div>
       </div>}
       {changePage && <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8"><DecisionEvidenceChange page={changePage} /></div>}
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8">
         {loaded ? <PolicyEvidenceReview key={loaded.presentation.proofSha256} initialPresentation={loaded.presentation}
-          dissent={loadDissent(process.cwd(), loaded.runId, loaded.presentation.proofSha256)} storagePath={loaded.storagePath} warnings={loaded.warnings} reviewError={loaded.reviewError} saveAction={saveReviewAction} /> : (
+          dissent={loadDissent(root, loaded.runId, loaded.presentation.proofSha256)} readOnly={hosted} storagePath={loaded.storagePath} warnings={loaded.warnings} reviewError={loaded.reviewError} saveAction={saveReviewAction} /> : (
           <section aria-labelledby="proof-unavailable" className="border-2 border-peat bg-surface p-6">
             <h2 id="proof-unavailable" className="text-2xl">No valid proof available</h2>
             <p className="mt-3" role={issue ? "alert" : undefined}>{issue ?? "No BUILD-001A proof artifact exists yet. No candidate data has been fabricated."}</p>
-            <p className="mt-4">From the repository root, generate a proof, then reload this page:</p>
-            <code className="mt-3 block break-words font-mono">npm.cmd run gaia:generate</code>
+            {!hosted && <><p className="mt-4">From the repository root, generate a proof, then reload this page:</p>
+            <code className="mt-3 block break-words font-mono">npm.cmd run gaia:generate</code></>}
           </section>
         )}
       </div>
       {loaded && <div className="mx-auto max-w-6xl px-4 pb-8 sm:px-8">
         <TrustSnapshotPanel key={`${loaded.runId}-${loaded.presentation.proofSha256}-${loaded.presentation.reviewRevision}`}
-          page={loadSnapshotPage(process.cwd(), loaded.runId, loaded.presentation.proofSha256)} createAction={createSnapshotAction} />
+          page={loadSnapshotPage(root, loaded.runId, loaded.presentation.proofSha256)} readOnly={hosted} createAction={createSnapshotAction} />
       </div>}
       <ExecutiveSourceEvidence page={executivePage} />
       </ExecutiveEvidenceLayout>

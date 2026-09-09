@@ -6,7 +6,7 @@ import type { SavedSnapshot, SnapshotActionResult, SnapshotPage } from "@/lib/ga
 import { SNAPSHOT_BOUNDARY } from "@/lib/gaia/policy-evidence-snapshot-boundary"
 import { SnapshotEvidence } from "./policy-evidence-snapshot"
 
-export function TrustSnapshotPanel({ page, createAction }: { page: SnapshotPage; createAction: (request: SnapshotRequest) => Promise<SnapshotActionResult> }) {
+export function TrustSnapshotPanel({ page, createAction, readOnly = false }: { page: SnapshotPage; readOnly?: boolean; createAction: (request: SnapshotRequest) => Promise<SnapshotActionResult> }) {
   const [candidateId, setCandidateId] = useState(page.saved[0]?.snapshot.candidateId ?? page.candidates[0]?.id ?? "")
   const [created, setCreated] = useState<SavedSnapshot | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -15,7 +15,7 @@ export function TrustSnapshotPanel({ page, createAction }: { page: SnapshotPage;
   const saved = selected && selected.snapshot.runId === page.runId &&
     (["source", "proof", "reviews", "dissent"] as const).every((key) => selected.snapshot.bindings[key] === page.bindings?.[key]) ? selected : null
   function freeze() {
-    if (!page.bindings) return
+    if (readOnly || !page.bindings) return
     const expectedBindings = page.bindings
     setError(null)
     startTransition(async () => {
@@ -38,7 +38,7 @@ export function TrustSnapshotPanel({ page, createAction }: { page: SnapshotPage;
         {page.candidates.map((item) => <option key={item.id} value={item.id}>{item.id}</option>)}
       </select>
       <p className="mt-2 whitespace-pre-wrap break-words">{page.candidates.find((item) => item.id === candidateId)?.wording}</p>
-      <button type="button" disabled={pending || !candidateId} onClick={freeze} className="mt-4 min-h-11 border-2 border-peat bg-surface px-4 py-2 font-bold hover:bg-paper disabled:opacity-60">{pending ? "Freezing snapshot…" : "Freeze a new snapshot"}</button>
+      {readOnly ? <p className="mt-4 font-bold">Hosted demonstration — read-only. Snapshot creation is disabled.</p> : <button type="button" disabled={pending || !candidateId} onClick={freeze} className="mt-4 min-h-11 border-2 border-peat bg-surface px-4 py-2 font-bold hover:bg-paper disabled:opacity-60">{pending ? "Freezing snapshot…" : "Freeze a new snapshot"}</button>}
     </>}
     <p role="status" aria-live="polite" className="mt-3">{created ? "Snapshot saved as a separate local artifact. Upstream evidence and human review were preserved." : ""}</p>
     {error && <p role="alert" className="mt-3">{error}</p>}

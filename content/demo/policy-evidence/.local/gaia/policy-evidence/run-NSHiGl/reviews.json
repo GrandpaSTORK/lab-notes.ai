@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "BUILD-001B/1",
+  "proofSha256": "e2f418191c8e23b29919bf197b121103cee3621a1cc713c0f1fc060c6833531e",
+  "revision": 3,
+  "events": [
+    {
+      "candidateId": "CAND-001",
+      "originalMachineWording": "Some responses welcome reduced repetition, faster decisions, or online service ambitions while leaving their practical benefit conditional on people's ability to access, correct, or challenge the service. Approval of an ambition does not establish acceptance of its delivery.",
+      "originalMachineAssessment": {
+        "status": "CONTESTED",
+        "reason": "Support and at least one material contradiction or qualification were recorded.",
+        "ruleVersion": "GAIA-assessment/1"
+      },
+      "disposition": "HOLD_DISSONANCE",
+      "rationale": "legitimate concerns, need more information",
+      "revisedWording": null,
+      "reviewedAt": "2026-09-07T18:52:15.819Z",
+      "reviewRevision": 1
+    },
+    {
+      "candidateId": "CAND-002",
+      "originalMachineWording": "Recognition of training, support for a tool's aim, and welcome for a right to ask why coexist with concerns about whether staff and affected people can exercise meaningful judgment or secure an accountable response.",
+      "originalMachineAssessment": {
+        "status": "CONTESTED",
+        "reason": "Support and at least one material contradiction or qualification were recorded.",
+        "ruleVersion": "GAIA-assessment/1"
+      },
+      "disposition": "CONFIRM",
+      "rationale": "reasonable",
+      "revisedWording": null,
+      "reviewedAt": "2026-09-07T18:55:49.319Z",
+      "reviewRevision": 2
+    },
+    {
+      "candidateId": "CAND-003",
+      "originalMachineWording": "Several responses distinguish a specific accepted benefit or provision from a broader conclusion they consider unresolved: lawful basis from proportionality, published retention from contractor-copy handling, proven purchasing from ability to exit, and reduced mileage from net environmental savings.",
+      "originalMachineAssessment": {
+        "status": "CONTESTED",
+        "reason": "Support and at least one material contradiction or qualification were recorded.",
+        "ruleVersion": "GAIA-assessment/1"
+      },
+      "disposition": "HOLD_DISSONANCE",
+      "rationale": "valid concerns which require more detail",
+      "revisedWording": null,
+      "reviewedAt": "2026-09-07T19:01:01.382Z",
+      "reviewRevision": 3
+    }
+  ]
+}

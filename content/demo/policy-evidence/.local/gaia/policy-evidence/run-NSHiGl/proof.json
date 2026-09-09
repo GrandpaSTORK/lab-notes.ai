@@ -1,0 +1,1685 @@
+{
+  "schemaVersion": "BUILD-001A/1",
+  "disclosure": "Synthetic working data",
+  "attribution": "GAIA extension built on Hypership's lab-notes.ai and build-policy-evidence foundation.",
+  "source": {
+    "path": "content/playbooks/policy-evidence/policy-evidence.data.json",
+    "sha256": "4eddb75d3c8e1611d9646940cc0f35bf8756b2c8f8ad59a71cb281110104ad1b",
+    "ids": [
+      "SYN-0001",
+      "SYN-0002",
+      "SYN-0003",
+      "SYN-0004",
+      "SYN-0005",
+      "SYN-0006",
+      "SYN-0007",
+      "SYN-0008",
+      "SYN-0009",
+      "SYN-0010",
+      "SYN-0011",
+      "SYN-0012",
+      "SYN-0013",
+      "SYN-0014",
+      "SYN-0015",
+      "SYN-0016",
+      "SYN-0017",
+      "SYN-0018",
+      "SYN-0019",
+      "SYN-0020"
+    ],
+    "count": 20
+  },
+  "provenance": {
+    "startedAt": "2026-09-07T11:57:22.568Z",
+    "endedAt": "2026-09-07T12:01:24.947Z",
+    "requestedModel": "gpt-6-astra",
+    "cliVersion": "codex-cli 0.153.4",
+    "methodVersion": "GAIA-generation/1",
+    "promptVersion": "BUILD-001A/1",
+    "promptSha256": "7c6702e74bab25e25de863f815a7521ceffc2ac618030f3f4edd953e56d03442",
+    "generationCodeSha256": "7468d003d9e988ea0378f0298da148d2b882fbd696a12381223c6262caa2ed2a",
+    "domainCodeSha256": "9019d730085deb9e279f593de5cd7cabe17fe0af5a3399c7a35c303073e44755",
+    "skillSha256": "49f010b23e7cd1b6819c746ae2cdbafd6777eaa526b01607e859abe50dab9321",
+    "calls": [
+      {
+        "stage": "candidates",
+        "startedAt": "2026-09-07T11:57:22.588Z",
+        "endedAt": "2026-09-07T11:57:54.556Z",
+        "cliVersion": "codex-cli 0.153.4",
+        "reportedModel": "gpt-6-astra",
+        "reportedProvider": "openai",
+        "sessionId": "01a07bba-ebb8-7261-9cf9-e75b76d3a28f",
+        "promptSha256": "4fb3ef14d9da1ad347cb38adb0199aca0a8c5099783e8322fc62bf190431874a",
+        "outputSchemaSha256": "1d936b8c3feeb575fb0c267f3266ff2d4509d52e7e9334b60a24d90ef3c6e090",
+        "responseSha256": "b19b075bb3bb061bea397ac1c8eb208adfac72ee5fed8bbfd6d7321ed2ec8328",
+        "exitCode": 0
+      },
+      {
+        "stage": "examination-1",
+        "startedAt": "2026-09-07T11:57:54.584Z",
+        "endedAt": "2026-09-07T11:59:16.214Z",
+        "cliVersion": "codex-cli 0.153.4",
+        "reportedModel": "gpt-6-astra",
+        "reportedProvider": "openai",
+        "sessionId": "01a07bbb-68f1-7461-8685-7688e87cb73a",
+        "promptSha256": "e635bf61a0890c2acc4e31fed93eb0bb8a062d22fbe278f4b75aba3a437e234c",
+        "outputSchemaSha256": "0f4e017bdb52d4d859a8a9e003658a162e583a82606602514e56e4120841972b",
+        "responseSha256": "22e032cf8c1ce45ff10b3e5ac65fae4afbee72295b2e9050ad15b0ae68349d50",
+        "exitCode": 0
+      },
+      {
+        "stage": "examination-2",
+        "startedAt": "2026-09-07T11:59:16.243Z",
+        "endedAt": "2026-09-07T12:00:21.714Z",
+        "cliVersion": "codex-cli 0.153.4",
+        "reportedModel": "gpt-6-astra",
+        "reportedProvider": "openai",
+        "sessionId": "01a07bbc-a81e-7ce1-8e40-a60593ad56c4",
+        "promptSha256": "753e5a5853964ee0992eb376f1ae18b0802fc22862521231838b20b7be65eb47",
+        "outputSchemaSha256": "0f4e017bdb52d4d859a8a9e003658a162e583a82606602514e56e4120841972b",
+        "responseSha256": "9691fc11a7b7243035eb740ffe16784f7cd2a86564cf6718bcebd2cf740d74b8",
+        "exitCode": 0
+      },
+      {
+        "stage": "examination-3",
+        "startedAt": "2026-09-07T12:00:21.777Z",
+        "endedAt": "2026-09-07T12:01:24.882Z",
+        "cliVersion": "codex-cli 0.153.4",
+        "reportedModel": "gpt-6-astra",
+        "reportedProvider": "openai",
+        "sessionId": "01a07bbd-a808-76e2-8231-2de7af9e9013",
+        "promptSha256": "db54d772aaa9cb674ea6e574e9bcff53ed914613de8e4f99d415613b26816203",
+        "outputSchemaSha256": "0f4e017bdb52d4d859a8a9e003658a162e583a82606602514e56e4120841972b",
+        "responseSha256": "3578b002f72a43af0c0cb00f17bad00f2b6356304850281c4bddcb37d69caf4d",
+        "exitCode": 0
+      }
+    ]
+  },
+  "candidateCount": 3,
+  "limitations": [
+    "AI-authored synthetic testimony is not real citizen evidence or a basis for policy decisions.",
+    "The actual consultation purpose and accountable policy owner are unknown.",
+    "Complete coverage means an entry for every supplied record; it does not prove correct reading or absence of missed language.",
+    "Exact quotations establish traceability, not the correctness or materiality of the AI relationship classifications.",
+    "Machine assessment is deterministic over AI-authored relationships, not an independent factual or human judgement.",
+    "No prevalence, priority, representativeness, operational effectiveness, or real-corpus completeness is established."
+  ],
+  "candidates": [
+    {
+      "id": "CAND-001",
+      "candidate": {
+        "interpretation": "Some responses welcome reduced repetition, faster decisions, or online service ambitions while leaving their practical benefit conditional on people's ability to access, correct, or challenge the service. Approval of an ambition does not establish acceptance of its delivery.",
+        "relevance": "A human could examine reduced repetition alongside personal correction rights (SYN-0002), uncertainty about refusal and review delays (SYN-0003), and unreliable broadband despite agreement with the ambition (SYN-0004). SYN-0001 challenges whether digital access is a choice at all for the people described.",
+        "limitations": [
+          "SYN-0003 questions the benefit of faster decisions rather than explicitly welcoming them.",
+          "The responses may concern different proposals; their conditions cannot be assumed to apply to one service.",
+          "These accounts do not establish the extent of access barriers or whether proposed changes would resolve review delays."
+        ]
+      },
+      "examination": {
+        "records": [
+          {
+            "sourceId": "SYN-0001",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "For the people we support it is not, and the paper alternative has been quietly withdrawn from three of the offices they used to be able to walk to.",
+                "explanation": "Supports examining practical access before accepting a digital service interpretation: the response describes digital exclusion alongside withdrawal of an alternative. It does not itself welcome the proposal."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0002",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Anything that stops people telling the same story four times to four different teams is welcome. Please make sure the single record can be corrected by the person it describes, and not only by staff.",
+                "explanation": "Directly pairs welcome for reduced repetition with a request for personal correction rights. This supports conditional endorsement, although the response does not explicitly say that every benefit disappears without those rights."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0003",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "If a decision is reached faster but the review afterwards still takes eleven weeks, we are not sure the change helps the people who most need it.",
+                "explanation": "Supports the candidate's concern that faster decisions may not deliver practical benefit when subsequent review remains slow."
+              },
+              {
+                "kind": "QUALIFICATION",
+                "quote": "It is hard to comment without knowing what happens at the point of refusal.",
+                "explanation": "The candidate acknowledges that this response does not explicitly welcome speed. The remaining restriction is that uncertainty extends to the refusal process itself, so the response cannot establish either approval or a settled judgment about delivery."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0004",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "The ambition is right and the timetable is not. Broadband where we are is still unreliable in bad weather, so a service that only works well online will only work well for some of us.",
+                "explanation": "Explicitly separates approval of the ambition from acceptance of delivery. Unreliable broadband conditions access, while rejection of the timetable adds a delivery objection beyond connectivity alone."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0005",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Adding a new system without removing anything else is not a productivity gain, it is unpaid overtime.",
+                "explanation": "If the candidate is used to interpret practical benefits across the corpus, workload must also be examined. This response disputes a productivity benefit on staffing and task-removal grounds, which access, correction, and challenge do not cover. It does not contradict the narrower claim about some responses."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0006",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Training is mentioned, which is more than usual. We would ask that it is delivered before go-live rather than as a recording sent round the week after, and that staff who raise problems during training are actually listened to.",
+                "explanation": "Supports the distinction between acknowledging a proposed provision and accepting its delivery: timing and responsiveness to staff concerns remain conditions. It does not establish welcome for the specific efficiency or online ambitions named in the candidate."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0007",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We support the aim but the risk sits with the least experienced, which is the opposite of how the proposal reads.",
+                "explanation": "Directly supports the distinction between approval of an aim and acceptance of its implementation."
+              },
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Experienced staff can usually tell when an output is wrong. Newer staff often cannot, and they will be the ones using the tool most.",
+                "explanation": "Adds a prerequisite to effective correction or challenge: recognizing an incorrect output. The candidate's account of ability needs to retain this difference in experience and exposure, rather than treating formal opportunities to correct or challenge as sufficient."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0008",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We could not tell from the document whether a member of staff is permitted to disagree with a recommendation, or whether disagreeing creates extra work for them. The answer to that changes our view entirely.",
+                "explanation": "Supports the importance of practical challenge mechanisms to acceptance. Both permission to disagree and its workload consequences are unresolved; the response does not itself express approval."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0009",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Concerns identifiability and the safety of consultation text. It does not address the named service benefits, service access, correction or challenge, or approval of an ambition versus its delivery."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0010",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Separates acceptance of a lawful basis from acceptance of proportionality. That is a different proposition from welcoming service ambitions while questioning their practical delivery; treating the shared acceptance language as support would overextend the candidate."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0011",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Welcomes publication of retention information and requests information about contractor copies. It does not establish the candidate's named benefits or conditions, and its specific transparency request should not be converted into a claim about access, correction, or challenge."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0012",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Addresses uncertainty about record holding and privacy notices. The text does not connect that uncertainty to personal correction, challenge, access, or acceptance of a service ambition."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0013",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "When something goes wrong the person affected will be told that the system decided, and that is not an accountable answer.",
+                "explanation": "Supports examining whether people can meaningfully challenge service outcomes: the response anticipates an accountability failure. It expresses a concern about delivery, not observed outcomes or approval of an ambition."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0014",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We welcome the commitment that a person can ask why a decision was reached. The test will be whether the answer they get is one they can actually act on, rather than a reference to a policy number.",
+                "explanation": "Directly supports conditional welcome and the distinction between commitment and delivery. The usefulness of an explanation depends on whether the person can act on it, which bears on practical challenge."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0015",
+            "relationships": [
+              {
+                "kind": "AMBIGUITY",
+                "quote": "Between the policy lead and the frontline there are two teams and a supplier, and the proposal does not say which of them holds the decision when they disagree with each other.",
+                "explanation": "Unresolved decision ownership could affect how a challenge is handled, but the passage concerns disagreement among delivery bodies. It does not establish whether affected people can challenge decisions or whether such challenges encounter this gap."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0016",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Questions whether procurement requirements deliberately describe an existing product. It does not address the candidate's benefits, people's ability to use or challenge the service, or approval of an ambition."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0017",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Buying something proven is sensible and being unable to leave is not. We would want an exit plan, an export in a format another supplier can read, and the cost of both written down before signature rather than after.",
+                "explanation": "Supports the candidate's general distinction between approving an approach and accepting its delivery terms. The conditions concern supplier exit and portability, so this passage does not corroborate the narrower access, correction, or challenge claims."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0018",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We support reuse in principle but do not know what is actually available to reuse.",
+                "explanation": "Supports the distinction between approval in principle and an informed judgment about implementation. The missing information concerns available resources, not the specific personal service conditions named in the candidate."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0019",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Disputes the completeness of electricity accounting. It neither welcomes the named ambitions nor connects practical benefits to access, correction, or challenge; the candidate's limited claim about some responses does not oppose this separate concern."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0020",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Fewer site visits genuinely does reduce mileage and we recognise that. Whether the saving survives once the processing and the storage are counted is not shown, and the assessment should show it either way.",
+                "explanation": "Limits any broader application of the candidate's account of conditional benefits: this response recognizes a specific benefit while questioning the net saving because accounting is incomplete. Its condition is environmental accounting, not people's ability to access, correct, or challenge the service."
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "The responses may concern different proposals; relationships do not establish a shared service, causal effects, prevalence, or priority.",
+          "The candidate's claim about 'some responses' is narrower than a corpus-wide explanation. Additional concerns restrict its usefulness as an overall account without necessarily contradicting its wording.",
+          "Several records support only the general distinction between approval and delivery, not the specific ambitions or personal conditions named in the first sentence.",
+          "Requests accompanying welcome do not always explicitly make approval conditional. That connection remains a contestable interpretation for human examination.",
+          "Implicit connections may have been missed, especially between record ownership, accountability, transparency, and effective challenge. NO_RELEVANT_BEARING indicates insufficient textual connection to this candidate, not lack of importance.",
+          "The supplied language establishes expressed views and uncertainties, not whether predicted problems occurred or proposed safeguards would resolve them."
+        ]
+      },
+      "validated": {
+        "records": [
+          {
+            "sourceId": "SYN-0001",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "For the people we support it is not, and the paper alternative has been quietly withdrawn from three of the offices they used to be able to walk to.",
+                "explanation": "Supports examining practical access before accepting a digital service interpretation: the response describes digital exclusion alongside withdrawal of an alternative. It does not itself welcome the proposal.",
+                "start": 115,
+                "end": 263
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0002",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Anything that stops people telling the same story four times to four different teams is welcome. Please make sure the single record can be corrected by the person it describes, and not only by staff.",
+                "explanation": "Directly pairs welcome for reduced repetition with a request for personal correction rights. This supports conditional endorsement, although the response does not explicitly say that every benefit disappears without those rights.",
+                "start": 0,
+                "end": 199
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0003",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "If a decision is reached faster but the review afterwards still takes eleven weeks, we are not sure the change helps the people who most need it.",
+                "explanation": "Supports the candidate's concern that faster decisions may not deliver practical benefit when subsequent review remains slow.",
+                "start": 76,
+                "end": 221
+              },
+              {
+                "kind": "QUALIFICATION",
+                "quote": "It is hard to comment without knowing what happens at the point of refusal.",
+                "explanation": "The candidate acknowledges that this response does not explicitly welcome speed. The remaining restriction is that uncertainty extends to the refusal process itself, so the response cannot establish either approval or a settled judgment about delivery.",
+                "start": 0,
+                "end": 75
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0004",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "The ambition is right and the timetable is not. Broadband where we are is still unreliable in bad weather, so a service that only works well online will only work well for some of us.",
+                "explanation": "Explicitly separates approval of the ambition from acceptance of delivery. Unreliable broadband conditions access, while rejection of the timetable adds a delivery objection beyond connectivity alone.",
+                "start": 0,
+                "end": 183
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0005",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Adding a new system without removing anything else is not a productivity gain, it is unpaid overtime.",
+                "explanation": "If the candidate is used to interpret practical benefits across the corpus, workload must also be examined. This response disputes a productivity benefit on staffing and task-removal grounds, which access, correction, and challenge do not cover. It does not contradict the narrower claim about some responses.",
+                "start": 44,
+                "end": 145
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0006",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Training is mentioned, which is more than usual. We would ask that it is delivered before go-live rather than as a recording sent round the week after, and that staff who raise problems during training are actually listened to.",
+                "explanation": "Supports the distinction between acknowledging a proposed provision and accepting its delivery: timing and responsiveness to staff concerns remain conditions. It does not establish welcome for the specific efficiency or online ambitions named in the candidate.",
+                "start": 0,
+                "end": 227
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0007",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We support the aim but the risk sits with the least experienced, which is the opposite of how the proposal reads.",
+                "explanation": "Directly supports the distinction between approval of an aim and acceptance of its implementation.",
+                "start": 133,
+                "end": 246
+              },
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Experienced staff can usually tell when an output is wrong. Newer staff often cannot, and they will be the ones using the tool most.",
+                "explanation": "Adds a prerequisite to effective correction or challenge: recognizing an incorrect output. The candidate's account of ability needs to retain this difference in experience and exposure, rather than treating formal opportunities to correct or challenge as sufficient.",
+                "start": 0,
+                "end": 132
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0008",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We could not tell from the document whether a member of staff is permitted to disagree with a recommendation, or whether disagreeing creates extra work for them. The answer to that changes our view entirely.",
+                "explanation": "Supports the importance of practical challenge mechanisms to acceptance. Both permission to disagree and its workload consequences are unresolved; the response does not itself express approval.",
+                "start": 0,
+                "end": 207
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0009",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Concerns identifiability and the safety of consultation text. It does not address the named service benefits, service access, correction or challenge, or approval of an ambition versus its delivery.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0010",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Separates acceptance of a lawful basis from acceptance of proportionality. That is a different proposition from welcoming service ambitions while questioning their practical delivery; treating the shared acceptance language as support would overextend the candidate.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0011",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Welcomes publication of retention information and requests information about contractor copies. It does not establish the candidate's named benefits or conditions, and its specific transparency request should not be converted into a claim about access, correction, or challenge.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0012",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Addresses uncertainty about record holding and privacy notices. The text does not connect that uncertainty to personal correction, challenge, access, or acceptance of a service ambition.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0013",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "When something goes wrong the person affected will be told that the system decided, and that is not an accountable answer.",
+                "explanation": "Supports examining whether people can meaningfully challenge service outcomes: the response anticipates an accountability failure. It expresses a concern about delivery, not observed outcomes or approval of an ambition.",
+                "start": 101,
+                "end": 223
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0014",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We welcome the commitment that a person can ask why a decision was reached. The test will be whether the answer they get is one they can actually act on, rather than a reference to a policy number.",
+                "explanation": "Directly supports conditional welcome and the distinction between commitment and delivery. The usefulness of an explanation depends on whether the person can act on it, which bears on practical challenge.",
+                "start": 0,
+                "end": 197
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0015",
+            "relationships": [
+              {
+                "kind": "AMBIGUITY",
+                "quote": "Between the policy lead and the frontline there are two teams and a supplier, and the proposal does not say which of them holds the decision when they disagree with each other.",
+                "explanation": "Unresolved decision ownership could affect how a challenge is handled, but the passage concerns disagreement among delivery bodies. It does not establish whether affected people can challenge decisions or whether such challenges encounter this gap.",
+                "start": 57,
+                "end": 233
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0016",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Questions whether procurement requirements deliberately describe an existing product. It does not address the candidate's benefits, people's ability to use or challenge the service, or approval of an ambition.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0017",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Buying something proven is sensible and being unable to leave is not. We would want an exit plan, an export in a format another supplier can read, and the cost of both written down before signature rather than after.",
+                "explanation": "Supports the candidate's general distinction between approving an approach and accepting its delivery terms. The conditions concern supplier exit and portability, so this passage does not corroborate the narrower access, correction, or challenge claims.",
+                "start": 0,
+                "end": 216
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0018",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We support reuse in principle but do not know what is actually available to reuse.",
+                "explanation": "Supports the distinction between approval in principle and an informed judgment about implementation. The missing information concerns available resources, not the specific personal service conditions named in the candidate.",
+                "start": 0,
+                "end": 82
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0019",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Disputes the completeness of electricity accounting. It neither welcomes the named ambitions nor connects practical benefits to access, correction, or challenge; the candidate's limited claim about some responses does not oppose this separate concern.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0020",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Fewer site visits genuinely does reduce mileage and we recognise that. Whether the saving survives once the processing and the storage are counted is not shown, and the assessment should show it either way.",
+                "explanation": "Limits any broader application of the candidate's account of conditional benefits: this response recognizes a specific benefit while questioning the net saving because accounting is incomplete. Its condition is environmental accounting, not people's ability to access, correct, or challenge the service.",
+                "start": 0,
+                "end": 206
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "The responses may concern different proposals; relationships do not establish a shared service, causal effects, prevalence, or priority.",
+          "The candidate's claim about 'some responses' is narrower than a corpus-wide explanation. Additional concerns restrict its usefulness as an overall account without necessarily contradicting its wording.",
+          "Several records support only the general distinction between approval and delivery, not the specific ambitions or personal conditions named in the first sentence.",
+          "Requests accompanying welcome do not always explicitly make approval conditional. That connection remains a contestable interpretation for human examination.",
+          "Implicit connections may have been missed, especially between record ownership, accountability, transparency, and effective challenge. NO_RELEVANT_BEARING indicates insufficient textual connection to this candidate, not lack of importance.",
+          "The supplied language establishes expressed views and uncertainties, not whether predicted problems occurred or proposed safeguards would resolve them."
+        ],
+        "coverage": {
+          "expected": 20,
+          "examined": 20,
+          "allSourcesExamined": true
+        },
+        "assessment": {
+          "status": "CONTESTED",
+          "reason": "Support and at least one material contradiction or qualification were recorded.",
+          "ruleVersion": "GAIA-assessment/1"
+        }
+      }
+    },
+    {
+      "id": "CAND-002",
+      "candidate": {
+        "interpretation": "Recognition of training, support for a tool's aim, and welcome for a right to ask why coexist with concerns about whether staff and affected people can exercise meaningful judgment or secure an accountable response.",
+        "relevance": "A human could examine training timing and whether concerns are heard (SYN-0006), uneven ability to detect wrong outputs (SYN-0007), permission and workload implications of disagreeing (SYN-0008), actionable explanations (SYN-0014), and unresolved operational responsibility (SYN-0013 and SYN-0015).",
+        "limitations": [
+          "SYN-0008 leaves permission to disagree unresolved; it does not establish that disagreement is prohibited.",
+          "SYN-0013 predicts an unaccountable answer rather than reporting an observed incident.",
+          "The responses do not demonstrate that training or explanations would resolve the responsibility gaps, and may concern separate proposals."
+        ]
+      },
+      "examination": {
+        "records": [
+          {
+            "sourceId": "SYN-0001",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "For the people we support it is not, and the paper alternative has been quietly withdrawn from three of the offices they used to be able to walk to.",
+                "explanation": "Access barriers add a prerequisite beyond judgment and accountability: some affected people may lack a usable service route. This restricts the candidate's usefulness as an account of their concerns."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0002",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Please make sure the single record can be corrected by the person it describes, and not only by staff.",
+                "explanation": "The requested ability to correct a record supports the concern about affected people's meaningful agency, although it does not address training or explanations."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0003",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "If a decision is reached faster but the review afterwards still takes eleven weeks, we are not sure the change helps the people who most need it.",
+                "explanation": "The conditional concern about delayed review supports examining whether affected people can obtain an effective response after a decision."
+              },
+              {
+                "kind": "AMBIGUITY",
+                "quote": "It is hard to comment without knowing what happens at the point of refusal.",
+                "explanation": "The refusal process is unspecified, leaving the available opportunities for judgment or an accountable response unresolved."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0004",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Broadband where we are is still unreliable in bad weather, so a service that only works well online will only work well for some of us.",
+                "explanation": "The benefit is restricted by connectivity. Meaningful judgment and accountable responses would not alone address this condition of access."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0005",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Adding a new system without removing anything else is not a productivity gain, it is unpaid overtime.",
+                "explanation": "The workload objection extends beyond the candidate's reference to work created by disagreeing. It concerns introducing the system itself, so interpreting workload solely through permission to exercise judgment would narrow this response."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0006",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Training is mentioned, which is more than usual.",
+                "explanation": "This directly supports recognition of training, without establishing that its delivery will be adequate."
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "We would ask that it is delivered before go-live rather than as a recording sent round the week after, and that staff who raise problems during training are actually listened to.",
+                "explanation": "Timing and listening are explicit conditions, supporting the candidate's concern about whether staff judgment will have practical effect."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0007",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Experienced staff can usually tell when an output is wrong. Newer staff often cannot, and they will be the ones using the tool most.",
+                "explanation": "The contrast supports uneven capacity to assess outputs. It also confines the concern: the response attributes some detection ability to experienced staff."
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "We support the aim but the risk sits with the least experienced, which is the opposite of how the proposal reads.",
+                "explanation": "Support for the aim explicitly coexists with concern about where risk falls, matching the candidate's wording."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0008",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "The answer to that changes our view entirely.",
+                "explanation": "The respondent makes their view depend on resolving the preceding questions about permission and workload, supporting their decision relevance."
+              },
+              {
+                "kind": "AMBIGUITY",
+                "quote": "We could not tell from the document whether a member of staff is permitted to disagree with a recommendation, or whether disagreeing creates extra work for them.",
+                "explanation": "Both permission and the practical cost of disagreement remain unknown. This does not establish that disagreement is prohibited or burdensome."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0009",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The response concerns identification risks in consultation text, without addressing training, judgment over service decisions, or accountable responses to those decisions."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0010",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The distinction between lawful basis and proportionality concerns a separate proposition. Conditional acceptance alone does not support the candidate's specific interpretation."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0011",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The request concerns retention information and contractor working copies. It does not establish a bearing on exercising judgment or obtaining an accountable response to a service decision."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0012",
+            "relationships": [
+              {
+                "kind": "AMBIGUITY",
+                "quote": "It is not clear to us who holds the record once it has been shared with a partner body.",
+                "explanation": "Unclear record custody may bear on identifying whom affected people can approach, but the response does not establish who holds decision responsibility or how a response would be secured."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0013",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "There is a named responsible officer in the diagram and no named responsible officer in the process.",
+                "explanation": "The distinction directly supports concern about operational accountability despite formally identified responsibility."
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "When something goes wrong the person affected will be told that the system decided, and that is not an accountable answer.",
+                "explanation": "This explicitly anticipates an unaccountable response. As the candidate acknowledges, it is a prediction rather than an observed incident."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0014",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We welcome the commitment that a person can ask why a decision was reached.",
+                "explanation": "This directly supports welcome for the opportunity to ask why. It describes a commitment, without establishing an enforceable right."
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "The test will be whether the answer they get is one they can actually act on, rather than a reference to a policy number.",
+                "explanation": "The respondent conditions the value of an explanation on its usefulness for action, supporting the concern about meaningful agency and an effective response."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0015",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Ownership is clear at the top and unclear in the middle.",
+                "explanation": "This locates the accountability gap within operational arrangements while acknowledging clarity at the top."
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "Between the policy lead and the frontline there are two teams and a supplier, and the proposal does not say which of them holds the decision when they disagree with each other.",
+                "explanation": "Unspecified responsibility when participants disagree directly supports the candidate's concern about accountable decisions."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0016",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The concern is whether procurement requirements predetermine a product. The response does not connect this to staff or affected people's judgment or responses to service decisions."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0017",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The response concerns supplier exit, export arrangements, and costs. Its conditional support concerns procurement flexibility, a different proposition from the candidate."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0018",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Missing information about available reuse limits the respondent's consultation answer, but does not address the candidate's specific concern about service judgment and accountability."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0019",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The response challenges the completeness of electricity accounting, without bearing on the candidate's specific claims."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0020",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Recognition of mileage reductions is conditional on fuller environmental accounting. This concerns a separate benefit and does not support or oppose the candidate's wording."
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "These fictional responses may concern separate proposals; their juxtaposition does not establish a shared process, causal relationship, prevalence, or priority.",
+          "No passage materially contradicts the candidate's coexistence claim. Access and general workload concerns restrict its coverage without denying the identified concerns.",
+          "The candidate's phrase 'right to ask why' is stronger than SYN-0014's stated commitment; enforceability is not established.",
+          "Connections from record correction, review delays, and record custody to meaningful judgment or accountable responses are interpretive and vary in directness.",
+          "NO_RELEVANT_BEARING is relative to this candidate, not a judgment that a response lacks significance. Indirect meanings or missed language could warrant different relationships under human examination.",
+          "The excerpts do not establish actual implementation outcomes or whether training, explanations, or clearer ownership would resolve the concerns. Human interpretation remains authoritative."
+        ]
+      },
+      "validated": {
+        "records": [
+          {
+            "sourceId": "SYN-0001",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "For the people we support it is not, and the paper alternative has been quietly withdrawn from three of the offices they used to be able to walk to.",
+                "explanation": "Access barriers add a prerequisite beyond judgment and accountability: some affected people may lack a usable service route. This restricts the candidate's usefulness as an account of their concerns.",
+                "start": 115,
+                "end": 263
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0002",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Please make sure the single record can be corrected by the person it describes, and not only by staff.",
+                "explanation": "The requested ability to correct a record supports the concern about affected people's meaningful agency, although it does not address training or explanations.",
+                "start": 97,
+                "end": 199
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0003",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "If a decision is reached faster but the review afterwards still takes eleven weeks, we are not sure the change helps the people who most need it.",
+                "explanation": "The conditional concern about delayed review supports examining whether affected people can obtain an effective response after a decision.",
+                "start": 76,
+                "end": 221
+              },
+              {
+                "kind": "AMBIGUITY",
+                "quote": "It is hard to comment without knowing what happens at the point of refusal.",
+                "explanation": "The refusal process is unspecified, leaving the available opportunities for judgment or an accountable response unresolved.",
+                "start": 0,
+                "end": 75
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0004",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Broadband where we are is still unreliable in bad weather, so a service that only works well online will only work well for some of us.",
+                "explanation": "The benefit is restricted by connectivity. Meaningful judgment and accountable responses would not alone address this condition of access.",
+                "start": 48,
+                "end": 183
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0005",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "Adding a new system without removing anything else is not a productivity gain, it is unpaid overtime.",
+                "explanation": "The workload objection extends beyond the candidate's reference to work created by disagreeing. It concerns introducing the system itself, so interpreting workload solely through permission to exercise judgment would narrow this response.",
+                "start": 44,
+                "end": 145
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0006",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Training is mentioned, which is more than usual.",
+                "explanation": "This directly supports recognition of training, without establishing that its delivery will be adequate.",
+                "start": 0,
+                "end": 48
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "We would ask that it is delivered before go-live rather than as a recording sent round the week after, and that staff who raise problems during training are actually listened to.",
+                "explanation": "Timing and listening are explicit conditions, supporting the candidate's concern about whether staff judgment will have practical effect.",
+                "start": 49,
+                "end": 227
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0007",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Experienced staff can usually tell when an output is wrong. Newer staff often cannot, and they will be the ones using the tool most.",
+                "explanation": "The contrast supports uneven capacity to assess outputs. It also confines the concern: the response attributes some detection ability to experienced staff.",
+                "start": 0,
+                "end": 132
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "We support the aim but the risk sits with the least experienced, which is the opposite of how the proposal reads.",
+                "explanation": "Support for the aim explicitly coexists with concern about where risk falls, matching the candidate's wording.",
+                "start": 133,
+                "end": 246
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0008",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "The answer to that changes our view entirely.",
+                "explanation": "The respondent makes their view depend on resolving the preceding questions about permission and workload, supporting their decision relevance.",
+                "start": 162,
+                "end": 207
+              },
+              {
+                "kind": "AMBIGUITY",
+                "quote": "We could not tell from the document whether a member of staff is permitted to disagree with a recommendation, or whether disagreeing creates extra work for them.",
+                "explanation": "Both permission and the practical cost of disagreement remain unknown. This does not establish that disagreement is prohibited or burdensome.",
+                "start": 0,
+                "end": 161
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0009",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The response concerns identification risks in consultation text, without addressing training, judgment over service decisions, or accountable responses to those decisions.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0010",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The distinction between lawful basis and proportionality concerns a separate proposition. Conditional acceptance alone does not support the candidate's specific interpretation.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0011",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The request concerns retention information and contractor working copies. It does not establish a bearing on exercising judgment or obtaining an accountable response to a service decision.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0012",
+            "relationships": [
+              {
+                "kind": "AMBIGUITY",
+                "quote": "It is not clear to us who holds the record once it has been shared with a partner body.",
+                "explanation": "Unclear record custody may bear on identifying whom affected people can approach, but the response does not establish who holds decision responsibility or how a response would be secured.",
+                "start": 0,
+                "end": 87
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0013",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "There is a named responsible officer in the diagram and no named responsible officer in the process.",
+                "explanation": "The distinction directly supports concern about operational accountability despite formally identified responsibility.",
+                "start": 0,
+                "end": 100
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "When something goes wrong the person affected will be told that the system decided, and that is not an accountable answer.",
+                "explanation": "This explicitly anticipates an unaccountable response. As the candidate acknowledges, it is a prediction rather than an observed incident.",
+                "start": 101,
+                "end": 223
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0014",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We welcome the commitment that a person can ask why a decision was reached.",
+                "explanation": "This directly supports welcome for the opportunity to ask why. It describes a commitment, without establishing an enforceable right.",
+                "start": 0,
+                "end": 75
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "The test will be whether the answer they get is one they can actually act on, rather than a reference to a policy number.",
+                "explanation": "The respondent conditions the value of an explanation on its usefulness for action, supporting the concern about meaningful agency and an effective response.",
+                "start": 76,
+                "end": 197
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0015",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Ownership is clear at the top and unclear in the middle.",
+                "explanation": "This locates the accountability gap within operational arrangements while acknowledging clarity at the top.",
+                "start": 0,
+                "end": 56
+              },
+              {
+                "kind": "SUPPORT",
+                "quote": "Between the policy lead and the frontline there are two teams and a supplier, and the proposal does not say which of them holds the decision when they disagree with each other.",
+                "explanation": "Unspecified responsibility when participants disagree directly supports the candidate's concern about accountable decisions.",
+                "start": 57,
+                "end": 233
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0016",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The concern is whether procurement requirements predetermine a product. The response does not connect this to staff or affected people's judgment or responses to service decisions.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0017",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The response concerns supplier exit, export arrangements, and costs. Its conditional support concerns procurement flexibility, a different proposition from the candidate.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0018",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Missing information about available reuse limits the respondent's consultation answer, but does not address the candidate's specific concern about service judgment and accountability.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0019",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "The response challenges the completeness of electricity accounting, without bearing on the candidate's specific claims.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0020",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Recognition of mileage reductions is conditional on fuller environmental accounting. This concerns a separate benefit and does not support or oppose the candidate's wording.",
+                "start": null,
+                "end": null
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "These fictional responses may concern separate proposals; their juxtaposition does not establish a shared process, causal relationship, prevalence, or priority.",
+          "No passage materially contradicts the candidate's coexistence claim. Access and general workload concerns restrict its coverage without denying the identified concerns.",
+          "The candidate's phrase 'right to ask why' is stronger than SYN-0014's stated commitment; enforceability is not established.",
+          "Connections from record correction, review delays, and record custody to meaningful judgment or accountable responses are interpretive and vary in directness.",
+          "NO_RELEVANT_BEARING is relative to this candidate, not a judgment that a response lacks significance. Indirect meanings or missed language could warrant different relationships under human examination.",
+          "The excerpts do not establish actual implementation outcomes or whether training, explanations, or clearer ownership would resolve the concerns. Human interpretation remains authoritative."
+        ],
+        "coverage": {
+          "expected": 20,
+          "examined": 20,
+          "allSourcesExamined": true
+        },
+        "assessment": {
+          "status": "CONTESTED",
+          "reason": "Support and at least one material contradiction or qualification were recorded.",
+          "ruleVersion": "GAIA-assessment/1"
+        }
+      }
+    },
+    {
+      "id": "CAND-003",
+      "candidate": {
+        "interpretation": "Several responses distinguish a specific accepted benefit or provision from a broader conclusion they consider unresolved: lawful basis from proportionality, published retention from contractor-copy handling, proven purchasing from ability to exit, and reduced mileage from net environmental savings.",
+        "relevance": "A human could examine whether interpretations preserve these distinctions rather than treating limited acceptance as endorsement of the whole proposal (SYN-0010, SYN-0011, SYN-0017, and SYN-0020). SYN-0019 also directly disputes the completeness of an environmental calculation.",
+        "limitations": [
+          "These are distinct propositions across potentially different proposals, not evidence of one shared position.",
+          "SYN-0019 alleges an omitted computation cost; SYN-0020 leaves the net saving unresolved. Neither supplies calculations for verification.",
+          "The texts do not establish actual proportionality, contractor practices, supplier exit feasibility, or total environmental effects."
+        ]
+      },
+      "examination": {
+        "records": [
+          {
+            "sourceId": "SYN-0001",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Challenges digital choice and withdrawn paper access, without addressing the candidate's specified distinctions or accepting a limited benefit."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0002",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Anything that stops people telling the same story four times to four different teams is welcome. Please make sure the single record can be corrected by the person it describes, and not only by staff.",
+                "explanation": "Offers an additional instance of welcoming a specific benefit while requesting a provision relevant to acceptance. It does not establish any of the four specified distinctions."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0003",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "If a decision is reached faster but the review afterwards still takes eleven weeks, we are not sure the change helps the people who most need it.",
+                "explanation": "Limits extending the candidate's pattern to this response: faster decisions are hypothetical here, rather than an accepted benefit. The concern is whether they help given the review delay."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0004",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "The ambition is right and the timetable is not.",
+                "explanation": "Supports preserving limited approval separately from a wider judgment. Here the timetable is expressly rejected, rather than merely unresolved, so this is only an analogous distinction."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0005",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Rejects a productivity characterization and identifies unspecified work removal. It does not address the candidate's examples or acknowledge a specific accepted benefit."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0006",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Training is mentioned, which is more than usual. We would ask that it is delivered before go-live rather than as a recording sent round the week after, and that staff who raise problems during training are actually listened to.",
+                "explanation": "Distinguishes positive acknowledgment of a provision from requirements for its delivery, supporting the candidate's interpretive caution beyond its named examples."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0007",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We support the aim but the risk sits with the least experienced, which is the opposite of how the proposal reads.",
+                "explanation": "Supports distinguishing limited support from endorsement of the proposal. Acceptance concerns the aim, rather than a demonstrated benefit, and the risk portrayal is disputed."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0008",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Makes the respondent's view depend on unresolved staff discretion and workload. It supplies no limited acceptance or evidence about the candidate's specified distinctions."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0009",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Challenges assumptions about anonymity and structured text. This is a separate proposition from lawful basis versus proportionality and the other distinctions examined."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0010",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We accept there is a lawful basis for the processing described. We do not accept that having a lawful basis answers the question of whether the processing is proportionate, and the two are treated as the same thing throughout.",
+                "explanation": "Directly supports the candidate's lawful-basis/proportionality distinction. It rejects treating the former as answering the latter without establishing whether the processing is proportionate."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0011",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Publishing the retention period alongside the service itself is good practice and we would like to see it kept. Please also publish what happens to the working copies held by contractors.",
+                "explanation": "Directly separates approval of published retention information from a request for information about contractor copies."
+              },
+              {
+                "kind": "AMBIGUITY",
+                "quote": "Please also publish what happens to the working copies held by contractors.",
+                "explanation": "The request does not specify whether handling practices themselves are unsettled or merely undisclosed. Reading the candidate's 'unresolved' as an operational finding would exceed this text."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0012",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Raises uncertainty about record holding and privacy notices after partner sharing. It does not address contractor working copies or pair this uncertainty with an accepted provision."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0013",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Contrasts a diagram with operational accountability, but does not accept the diagram's named officer as a benefit or address the candidate's specified claims."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0014",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We welcome the commitment that a person can ask why a decision was reached. The test will be whether the answer they get is one they can actually act on, rather than a reference to a policy number.",
+                "explanation": "Provides another explicit distinction between an accepted provision and its unresolved practical value, supporting the candidate's caution about broader endorsement."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0015",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Ownership is clear at the top and unclear in the middle.",
+                "explanation": "Acknowledges clarity in a limited respect while withholding it elsewhere, supporting the general distinction between limited acceptance and broader resolution."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0016",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Questions product-specific requirements and tender preparation. It does not address proven purchasing or exit feasibility, so procurement subject matter alone does not support or contradict the candidate."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0017",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Buying something proven is sensible and being unable to leave is not. We would want an exit plan, an export in a format another supplier can read, and the cost of both written down before signature rather than after.",
+                "explanation": "Directly supports distinguishing acceptance of proven purchasing from requirements concerning exit, export compatibility, and costs before signature. It does not establish that exit is actually impossible."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0018",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We support reuse in principle but do not know what is actually available to reuse.",
+                "explanation": "Supports the broader caution that limited approval does not settle a proposal's practical merits. This is approval in principle rather than acceptance of a realized benefit."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0019",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "The impact assessment counts the electricity used by the building and not the electricity used by the computation. That omission makes the net figure look better than it is, and the omission is nowhere acknowledged.",
+                "explanation": "Directly supports the candidate's relevance statement that this response disputes the environmental calculation's completeness. It alleges an overstated net figure, without verifying the allegation or establishing a connection to SYN-0020's assessment."
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0020",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Fewer site visits genuinely does reduce mileage and we recognise that. Whether the saving survives once the processing and the storage are counted is not shown, and the assessment should show it either way.",
+                "explanation": "Directly supports the distinction between accepted mileage reduction and an unresolved net saving after processing and storage are counted. It neither confirms nor rules out that saving."
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "The examination uses only the supplied fictional texts. Shared proposals, causal effects, prevalence, and priority cannot be inferred.",
+          "Analogous responses support the interpretive distinction but do not independently establish the candidate's four named examples.",
+          "No response materially contradicts the candidate's bounded wording. Several reject particular claims or arrangements; these disagreements should not be softened into generic uncertainty.",
+          "Contractor-copy handling may be undisclosed rather than operationally unsettled. Exit requirements do not establish actual inability to leave, and environmental assertions supply no verifiable calculations.",
+          "Relationship choices remain contestable human interpretations. Indirect relevance, nuance, or missed language may warrant revising these classifications; NO_RELEVANT_BEARING applies only to this candidate."
+        ]
+      },
+      "validated": {
+        "records": [
+          {
+            "sourceId": "SYN-0001",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Challenges digital choice and withdrawn paper access, without addressing the candidate's specified distinctions or accepting a limited benefit.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0002",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Anything that stops people telling the same story four times to four different teams is welcome. Please make sure the single record can be corrected by the person it describes, and not only by staff.",
+                "explanation": "Offers an additional instance of welcoming a specific benefit while requesting a provision relevant to acceptance. It does not establish any of the four specified distinctions.",
+                "start": 0,
+                "end": 199
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0003",
+            "relationships": [
+              {
+                "kind": "QUALIFICATION",
+                "quote": "If a decision is reached faster but the review afterwards still takes eleven weeks, we are not sure the change helps the people who most need it.",
+                "explanation": "Limits extending the candidate's pattern to this response: faster decisions are hypothetical here, rather than an accepted benefit. The concern is whether they help given the review delay.",
+                "start": 76,
+                "end": 221
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0004",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "The ambition is right and the timetable is not.",
+                "explanation": "Supports preserving limited approval separately from a wider judgment. Here the timetable is expressly rejected, rather than merely unresolved, so this is only an analogous distinction.",
+                "start": 0,
+                "end": 47
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0005",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Rejects a productivity characterization and identifies unspecified work removal. It does not address the candidate's examples or acknowledge a specific accepted benefit.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0006",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Training is mentioned, which is more than usual. We would ask that it is delivered before go-live rather than as a recording sent round the week after, and that staff who raise problems during training are actually listened to.",
+                "explanation": "Distinguishes positive acknowledgment of a provision from requirements for its delivery, supporting the candidate's interpretive caution beyond its named examples.",
+                "start": 0,
+                "end": 227
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0007",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We support the aim but the risk sits with the least experienced, which is the opposite of how the proposal reads.",
+                "explanation": "Supports distinguishing limited support from endorsement of the proposal. Acceptance concerns the aim, rather than a demonstrated benefit, and the risk portrayal is disputed.",
+                "start": 133,
+                "end": 246
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0008",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Makes the respondent's view depend on unresolved staff discretion and workload. It supplies no limited acceptance or evidence about the candidate's specified distinctions.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0009",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Challenges assumptions about anonymity and structured text. This is a separate proposition from lawful basis versus proportionality and the other distinctions examined.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0010",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We accept there is a lawful basis for the processing described. We do not accept that having a lawful basis answers the question of whether the processing is proportionate, and the two are treated as the same thing throughout.",
+                "explanation": "Directly supports the candidate's lawful-basis/proportionality distinction. It rejects treating the former as answering the latter without establishing whether the processing is proportionate.",
+                "start": 0,
+                "end": 226
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0011",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Publishing the retention period alongside the service itself is good practice and we would like to see it kept. Please also publish what happens to the working copies held by contractors.",
+                "explanation": "Directly separates approval of published retention information from a request for information about contractor copies.",
+                "start": 0,
+                "end": 187
+              },
+              {
+                "kind": "AMBIGUITY",
+                "quote": "Please also publish what happens to the working copies held by contractors.",
+                "explanation": "The request does not specify whether handling practices themselves are unsettled or merely undisclosed. Reading the candidate's 'unresolved' as an operational finding would exceed this text.",
+                "start": 112,
+                "end": 187
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0012",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Raises uncertainty about record holding and privacy notices after partner sharing. It does not address contractor working copies or pair this uncertainty with an accepted provision.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0013",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Contrasts a diagram with operational accountability, but does not accept the diagram's named officer as a benefit or address the candidate's specified claims.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0014",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We welcome the commitment that a person can ask why a decision was reached. The test will be whether the answer they get is one they can actually act on, rather than a reference to a policy number.",
+                "explanation": "Provides another explicit distinction between an accepted provision and its unresolved practical value, supporting the candidate's caution about broader endorsement.",
+                "start": 0,
+                "end": 197
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0015",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Ownership is clear at the top and unclear in the middle.",
+                "explanation": "Acknowledges clarity in a limited respect while withholding it elsewhere, supporting the general distinction between limited acceptance and broader resolution.",
+                "start": 0,
+                "end": 56
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0016",
+            "relationships": [
+              {
+                "kind": "NO_RELEVANT_BEARING",
+                "quote": null,
+                "explanation": "Questions product-specific requirements and tender preparation. It does not address proven purchasing or exit feasibility, so procurement subject matter alone does not support or contradict the candidate.",
+                "start": null,
+                "end": null
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0017",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Buying something proven is sensible and being unable to leave is not. We would want an exit plan, an export in a format another supplier can read, and the cost of both written down before signature rather than after.",
+                "explanation": "Directly supports distinguishing acceptance of proven purchasing from requirements concerning exit, export compatibility, and costs before signature. It does not establish that exit is actually impossible.",
+                "start": 0,
+                "end": 216
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0018",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "We support reuse in principle but do not know what is actually available to reuse.",
+                "explanation": "Supports the broader caution that limited approval does not settle a proposal's practical merits. This is approval in principle rather than acceptance of a realized benefit.",
+                "start": 0,
+                "end": 82
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0019",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "The impact assessment counts the electricity used by the building and not the electricity used by the computation. That omission makes the net figure look better than it is, and the omission is nowhere acknowledged.",
+                "explanation": "Directly supports the candidate's relevance statement that this response disputes the environmental calculation's completeness. It alleges an overstated net figure, without verifying the allegation or establishing a connection to SYN-0020's assessment.",
+                "start": 0,
+                "end": 215
+              }
+            ]
+          },
+          {
+            "sourceId": "SYN-0020",
+            "relationships": [
+              {
+                "kind": "SUPPORT",
+                "quote": "Fewer site visits genuinely does reduce mileage and we recognise that. Whether the saving survives once the processing and the storage are counted is not shown, and the assessment should show it either way.",
+                "explanation": "Directly supports the distinction between accepted mileage reduction and an unresolved net saving after processing and storage are counted. It neither confirms nor rules out that saving.",
+                "start": 0,
+                "end": 206
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "The examination uses only the supplied fictional texts. Shared proposals, causal effects, prevalence, and priority cannot be inferred.",
+          "Analogous responses support the interpretive distinction but do not independently establish the candidate's four named examples.",
+          "No response materially contradicts the candidate's bounded wording. Several reject particular claims or arrangements; these disagreements should not be softened into generic uncertainty.",
+          "Contractor-copy handling may be undisclosed rather than operationally unsettled. Exit requirements do not establish actual inability to leave, and environmental assertions supply no verifiable calculations.",
+          "Relationship choices remain contestable human interpretations. Indirect relevance, nuance, or missed language may warrant revising these classifications; NO_RELEVANT_BEARING applies only to this candidate."
+        ],
+        "coverage": {
+          "expected": 20,
+          "examined": 20,
+          "allSourcesExamined": true
+        },
+        "assessment": {
+          "status": "CONTESTED",
+          "reason": "Support and at least one material contradiction or qualification were recorded.",
+          "ruleVersion": "GAIA-assessment/1"
+        }
+      }
+    }
+  ]
+}

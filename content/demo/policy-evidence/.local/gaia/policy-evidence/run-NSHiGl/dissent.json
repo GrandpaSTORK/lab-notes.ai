@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "BUILD-001C/1",
+  "disclosure": "Synthetic working data",
+  "sourceSha256": "4eddb75d3c8e1611d9646940cc0f35bf8756b2c8f8ad59a71cb281110104ad1b",
+  "proofSha256": "e2f418191c8e23b29919bf197b121103cee3621a1cc713c0f1fc060c6833531e",
+  "limitations": [
+    "A challenge model finding does not establish semantic correctness.",
+    "Failure to surface dissent does not establish absence of dissent.",
+    "Exact quotation validation establishes traceability, not materiality.",
+    "A second model is not independent human judgment.",
+    "The challenge may reproduce biases or blind spots of the original model.",
+    "Complete record examination does not prove complete meaning comprehension.",
+    "Synthetic test success does not prove performance on real citizen testimony.",
+    "No claim of prevalence or representativeness is established.",
+    "No participant-confirmed meaning is established.",
+    "No policy sufficiency or organisational effectiveness is established."
+  ],
+  "challenges": [
+    {
+      "candidateId": "CAND-001",
+      "originalWording": "Some responses welcome reduced repetition, faster decisions, or online service ambitions while leaving their practical benefit conditional on people's ability to access, correct, or challenge the service. Approval of an ambition does not establish acceptance of its delivery.",
+      "provenance": {
+        "requestedModel": "gpt-6-astra",
+        "reportedModel": "gpt-6-astra",
+        "provider": "openai",
+        "cliVersion": "codex-cli 0.153.4",
+        "runtimeVersion": "v24.19.0",
+        "sessionId": "01a07d6f-69f3-7941-93d8-234de6a39efa",
+        "startedAt": "2026-09-07T19:54:08.481Z",
+        "endedAt": "2026-09-07T19:54:33.055Z",
+        "promptSha256": "5f445e15b06387bd825c31571675487086d300c1612e686b3514a249cf26ae97",
+        "responseSha256": "86efc0154750d9da161c4d78bf5879cbb1a1c4652968b45541f0bff73bf1a483",
+        "outputSchemaSha256": "89e62dfa4146a2084a6fd4c689a77ba895bee1cbe14850e8b4cbac9c3703a5ea"
+      },
+      "responseText": "{\"findings\":[],\"limitations\":[\"All 20 complete sources were examined against the candidate and the entire original examination, including SUPPORT and NO_RELEVANT_BEARING records. No potential unseen dissent was identified beyond bearings already adequately surfaced in that examination.\",\"This result is limited to the supplied synthetic corpus and candidate wording; it does not establish absence of dissent. No materiality or human disposition determination was made.\"]}",
+      "findings": [],
+      "limitations": [
+        "All 20 complete sources were examined against the candidate and the entire original examination, including SUPPORT and NO_RELEVANT_BEARING records. No potential unseen dissent was identified beyond bearings already adequately surfaced in that examination.",
+        "This result is limited to the supplied synthetic corpus and candidate wording; it does not establish absence of dissent. No materiality or human disposition determination was made."
+      ]
+    },
+    {
+      "candidateId": "CAND-002",
+      "originalWording": "Recognition of training, support for a tool's aim, and welcome for a right to ask why coexist with concerns about whether staff and affected people can exercise meaningful judgment or secure an accountable response.",
+      "provenance": {
+        "requestedModel": "gpt-6-astra",
+        "reportedModel": "gpt-6-astra",
+        "provider": "openai",
+        "cliVersion": "codex-cli 0.153.4",
+        "runtimeVersion": "v24.19.0",
+        "sessionId": "01a07d6f-c9b9-7ff2-993d-15470c157dc6",
+        "startedAt": "2026-09-07T19:54:33.089Z",
+        "endedAt": "2026-09-07T19:55:22.510Z",
+        "promptSha256": "6c821ca857c2468044a1adac0fe92f1e6d28757e47d611cfc6617c96363b86be",
+        "responseSha256": "164fe1de5fed8685adb981353348d4f068186d6319d911a294cb7eae0b3ceafe",
+        "outputSchemaSha256": "89e62dfa4146a2084a6fd4c689a77ba895bee1cbe14850e8b4cbac9c3703a5ea"
+      },
+      "responseText": "{\"findings\":[{\"sourceId\":\"SYN-0004\",\"quote\":\"The ambition is right and the timetable is not.\",\"explanation\":\"Approval of the ambition coexists with an explicit objection to implementation timing. This potentially qualifies the candidate by identifying readiness and scheduling as concerns alongside meaningful judgment and accountable responses. The source does not specify a suitable timetable.\",\"noveltyReason\":\"The original QUALIFICATION for this source addresses unequal access caused by unreliable broadband, but does not surface the explicit rejection of the timetable. Across the examination, training timing and additional workload are acknowledged, but neither adequately captures this source’s distinction between endorsing the ambition and rejecting its schedule.\"}],\"limitations\":[\"All 20 complete sources were considered against the candidate and the entire original examination. The supplied material is synthetic.\",\"The timing objection may overlap with the already identified connectivity constraint; the source does not establish an independent reason for rejecting the timetable.\",\"This identifies potential unseen dissent without deciding materiality or human disposition. No further findings does not establish absence of dissent.\"]}",
+      "findings": [
+        {
+          "sourceId": "SYN-0004",
+          "quote": "The ambition is right and the timetable is not.",
+          "explanation": "Approval of the ambition coexists with an explicit objection to implementation timing. This potentially qualifies the candidate by identifying readiness and scheduling as concerns alongside meaningful judgment and accountable responses. The source does not specify a suitable timetable.",
+          "noveltyReason": "The original QUALIFICATION for this source addresses unequal access caused by unreliable broadband, but does not surface the explicit rejection of the timetable. Across the examination, training timing and additional workload are acknowledged, but neither adequately captures this source’s distinction between endorsing the ambition and rejecting its schedule.",
+          "originalRelationships": [
+            {
+              "kind": "QUALIFICATION",
+              "quote": "Broadband where we are is still unreliable in bad weather, so a service that only works well online will only work well for some of us.",
+              "explanation": "The benefit is restricted by connectivity. Meaningful judgment and accountable responses would not alone address this condition of access.",
+              "start": 48,
+              "end": 183
+            }
+          ],
+          "start": 0,
+          "end": 47,
+          "originalTestimony": "The ambition is right and the timetable is not. Broadband where we are is still unreliable in bad weather, so a service that only works well online will only work well for some of us.",
+          "status": "POTENTIAL_UNSEEN_DISSENT",
+          "validation": {
+            "exactQuoteMatched": true,
+            "locationValidated": true,
+            "sourceFingerprintMatched": true,
+            "proofFingerprintMatched": true
+          }
+        }
+      ],
+      "limitations": [
+        "All 20 complete sources were considered against the candidate and the entire original examination. The supplied material is synthetic.",
+        "The timing objection may overlap with the already identified connectivity constraint; the source does not establish an independent reason for rejecting the timetable.",
+        "This identifies potential unseen dissent without deciding materiality or human disposition. No further findings does not establish absence of dissent."
+      ]
+    },
+    {
+      "candidateId": "CAND-003",
+      "originalWording": "Several responses distinguish a specific accepted benefit or provision from a broader conclusion they consider unresolved: lawful basis from proportionality, published retention from contractor-copy handling, proven purchasing from ability to exit, and reduced mileage from net environmental savings.",
+      "provenance": {
+        "requestedModel": "gpt-6-astra",
+        "reportedModel": "gpt-6-astra",
+        "provider": "openai",
+        "cliVersion": "codex-cli 0.153.4",
+        "runtimeVersion": "v24.19.0",
+        "sessionId": "01a07d70-8b08-7c71-883b-487c10229ccb",
+        "startedAt": "2026-09-07T19:55:22.529Z",
+        "endedAt": "2026-09-07T19:55:57.595Z",
+        "promptSha256": "7f9b45d710cd1c68b1ce52db6c0aa7f69c8a179a534644906c713907df5c3672",
+        "responseSha256": "77cbfdd1a2bf905cdbd9ce69b0a20a3dee6ed4fa64739c271f7c7ed86988da44",
+        "outputSchemaSha256": "89e62dfa4146a2084a6fd4c689a77ba895bee1cbe14850e8b4cbac9c3703a5ea"
+      },
+      "responseText": "{\"findings\":[],\"limitations\":[\"Reviewed all 20 complete sources against the candidate and the entire original examination, including SUPPORT and NO_RELEVANT_BEARING records. No potential unseen dissent was identified that was not already adequately surfaced in the examination.\",\"This result does not establish absence of dissent, verify the synthetic sources’ claims, or determine materiality or human disposition.\"]}",
+      "findings": [],
+      "limitations": [
+        "Reviewed all 20 complete sources against the candidate and the entire original examination, including SUPPORT and NO_RELEVANT_BEARING records. No potential unseen dissent was identified that was not already adequately surfaced in the examination.",
+        "This result does not establish absence of dissent, verify the synthetic sources’ claims, or determine materiality or human disposition."
+      ]
+    }
+  ]
+}

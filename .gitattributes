@@ -1,3 +1,5 @@
 # Synthetic datasets are pinned to LF so their diffs stay readable across
 # platforms and core.autocrlf cannot rewrite them on a Windows checkout.
 content/playbooks/**/*.data.json text eol=lf
+# Frozen demo artifacts must retain exact bytes on every checkout.
+content/demo/policy-evidence/** -text

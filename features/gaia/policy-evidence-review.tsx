@@ -128,7 +128,8 @@ function CandidateEvidence({ candidate }: { candidate: Candidate }) {
   )
 }
 
-export function PolicyEvidenceReview({ initialPresentation, storagePath, warnings, reviewError, saveAction, dissent }: {
+export function PolicyEvidenceReview({ initialPresentation, storagePath, warnings, reviewError, saveAction, dissent, readOnly = false }: {
+  readOnly?: boolean
   dissent?: Parameters<typeof UnseenDissent>[0]["dissent"]
   initialPresentation: ReviewPresentation
   storagePath: string
@@ -141,6 +142,7 @@ export function PolicyEvidenceReview({ initialPresentation, storagePath, warning
   const [message, setMessage] = useState("")
   const [error, setError] = useState<string | null>(null)
   async function save(request: Pick<ReviewRequest, "candidateId" | "disposition" | "rationale" | "revisedWording">) {
+    if (readOnly) return false
     setPending(true); setError(null); setMessage("Saving review…")
     try {
       const result = await saveAction({ ...request, proofSha256: presentation.proofSha256, expectedRevision: presentation.reviewRevision })
@@ -199,7 +201,7 @@ export function PolicyEvidenceReview({ initialPresentation, storagePath, warning
             <summary className="min-h-11 cursor-pointer py-2 font-bold">Evidence limitations — {candidate.id}</summary>
             <ul className="mt-2 list-disc space-y-2 pl-5">{candidate.limitations.map((limit, index) => <li key={index}>{limit}</li>)}</ul>
           </details>
-          <HumanReviewForm candidateId={candidate.id} disabled={pending || reviewError !== null} onSave={save} />
+          {readOnly ? <p className="mt-6 font-bold">Hosted demonstration — read-only. Review saving is disabled.</p> : <HumanReviewForm candidateId={candidate.id} disabled={pending || reviewError !== null} onSave={save} />}
           {!!candidate.history.length && <details className="mt-4">
             <summary className="min-h-11 cursor-pointer py-2 font-bold">Preserved review history — {candidate.id}</summary>
             <ol className="mt-2 list-decimal space-y-3 pl-5">{candidate.history.map((event) => <li key={event.reviewRevision}>
