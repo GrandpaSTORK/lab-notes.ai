@@ -1,10 +1,12 @@
 import type { BriefPage } from "@/lib/gaia/policy-evidence-brief-store"
 import { SnapshotEvidence } from "./policy-evidence-snapshot"
+import { BackToExecutiveSnapshot } from "./policy-evidence-navigation"
 
 export function DecisionEvidenceBrief({ page }: { page: BriefPage }) {
   const brief = page.brief
   return <section id="decision-evidence-brief" aria-labelledby="decision-brief-title" className="border-y-2 border-peat bg-surface p-4 sm:p-6">
     <h2 id="decision-brief-title" className="text-3xl">BUILD-001E — Decision Evidence Brief</h2>
+    <BackToExecutiveSnapshot />
     {page.names.length > 0 && <details className="mt-2"><summary className="min-h-11 cursor-pointer py-3 font-bold">Choose a frozen snapshot</summary>
       <ul className="space-y-2">{page.names.map((name) => <li key={name}><a className="inline-flex min-h-11 items-center break-all underline" aria-current={name === page.selectedName ? "page" : undefined}
         href={`?briefRun=${encodeURIComponent(page.runId!)}&brief=${encodeURIComponent(name)}#decision-evidence-brief`}>{name}</a></li>)}</ul>
@@ -24,7 +26,8 @@ export function DecisionEvidenceBrief({ page }: { page: BriefPage }) {
       </dl>
       <a className="mt-2 inline-flex min-h-11 items-center font-bold underline" href="#brief-trace">Trace this brief to the frozen evidence</a>
       <div className="mt-3 grid items-start gap-4 lg:grid-cols-2">
-        <section aria-label="Brief human review" className="border-2 border-peat p-4">
+        <section id="brief-human-review" aria-label="Brief human review" className="border-2 border-peat p-4">
+          <BackToExecutiveSnapshot />
           <h3 className="text-xl font-bold">Human review</h3><p className="mt-2 font-bold">{brief.humanReview.epistemicClass}</p>
           <p>{brief.humanReview.scope}</p><p className="mt-2">{brief.humanReview.meaning}</p>
           <p className="mt-2">Recorded review state: {brief.humanReview.state}; ledger: {brief.humanReview.ledgerState}.</p>
@@ -40,7 +43,8 @@ export function DecisionEvidenceBrief({ page }: { page: BriefPage }) {
           <ul className="mt-3 list-disc space-y-2 pl-5">{brief.unresolved.whatWasNotEstablished.map((limit, index) => <li key={index}>{limit}</li>)}</ul>
         </section>
       </div>
-      <section aria-label="Brief potential unseen dissent" className="mt-5 border-t-2 border-peat pt-4">
+      <section id="brief-potential-dissent" aria-label="Brief potential unseen dissent" className="mt-5 border-t-2 border-peat pt-4">
+        <BackToExecutiveSnapshot />
         <h3 className="text-xl font-bold">Potential unseen dissent</h3><p className="mt-2 font-bold">{brief.unseenDissent.epistemicClass} · {brief.unseenDissent.state}</p>
         {brief.unseenDissent.messages.map((message) => <p key={message}>{message}</p>)}
         <p className="mt-3">{brief.unseenDissent.boundary}</p>
@@ -71,6 +75,7 @@ export function DecisionEvidenceBrief({ page }: { page: BriefPage }) {
         </details>
       </section>
       <section id="brief-trace" aria-label="Trace this brief" className="mt-5 border-t-2 border-peat pt-4">
+        <BackToExecutiveSnapshot />
         <h3 className="text-xl font-bold">Trace this brief</h3>
         <p className="mt-2 break-all font-mono text-sm">{brief.trace.snapshotPath}</p>
         <p>Frozen {brief.trace.createdAt} · {brief.trace.runId} · {brief.interpretation.candidateId}</p>

@@ -231,4 +231,13 @@ frozen evidence even when current validation fails. It adds no decision action,
 recommendation or persistent artifact. The comparison names its current run and
 does not silently fall back to another proof. See `docs/builds/BUILD-001G.md`.
 
+BUILD-001H places leadership orientation before the detailed local proof. The
+synthetic disclosure stays visible beside the exact selected interpretation,
+separate human review and frozen dissent. Native theme disclosures expose exact
+stored labels, counts and source links without ranking or merging. Limitations
+retain equal visual standing; fingerprints and complete frozen evidence remain
+below through anchors. READY/PARTIAL/BLOCKED describe presentation availability
+only. Human demo-comprehension review and browser accessibility acceptance remain
+separate from mechanical tests. See `docs/builds/BUILD-001H.md`.
+
 No published recommended or ranked applications, hosted reference implementations, professional-authority claims for skills, autonomous production deployment workflows inside skills, runtime model calls, production integrations, person-level stand-ins where irresponsible, risk scores, maturity ladders, approval workflows, governance dashboards, dark theme, plugin packaging, or broad unrelated refactor.

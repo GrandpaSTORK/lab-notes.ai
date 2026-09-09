@@ -5,6 +5,7 @@ import type { DecisionRequest } from "@/lib/gaia/policy-evidence-decision"
 import type { DecisionActionResult, DecisionPage, SavedDecision } from "@/lib/gaia/policy-evidence-decision-store"
 import { DECISION_ACKNOWLEDGEMENT, DECISION_AUTHORITY, DECISION_BOUNDARY, DECISION_DISCLOSURE, DECISION_LIMIT } from "@/lib/gaia/policy-evidence-decision-boundary"
 import { DecisionRecordEvidence } from "./policy-evidence-decision"
+import { BackToExecutiveSnapshot } from "./policy-evidence-navigation"
 
 export function HumanDecisionPanel({ page, saveAction }: { page: DecisionPage; saveAction: (request: DecisionRequest) => Promise<DecisionActionResult> }) {
   const [created, setCreated] = useState<SavedDecision | null>(null)
@@ -32,6 +33,7 @@ export function HumanDecisionPanel({ page, saveAction }: { page: DecisionPage; s
   }
   return <section aria-labelledby="human-decision-title" className="mt-8 min-w-0 border-y-2 border-peat py-6">
     <h2 id="human-decision-title" className="font-display text-3xl">BUILD-001F — Human Decision Record</h2>
+    <BackToExecutiveSnapshot />
     <p className="mt-4 text-lg font-bold">{DECISION_BOUNDARY}</p>
     <p className="mt-3">{DECISION_AUTHORITY}</p>
     <p className="mt-3">{DECISION_LIMIT}</p>

@@ -16,6 +16,9 @@ import { loadDecisionPage } from "@/lib/gaia/policy-evidence-decision-store"
 import { saveDecisionAction } from "./decision-actions"
 import { loadDecisionChangePage } from "@/lib/gaia/policy-evidence-change-store"
 import { DecisionEvidenceChange } from "@/features/gaia/policy-evidence-change"
+import { loadExecutivePage } from "@/lib/gaia/policy-evidence-executive-store"
+import { ExecutiveEvidenceLayout, ExecutiveSourceEvidence } from "@/features/gaia/policy-evidence-executive"
+import { BackToExecutiveSnapshot } from "@/features/gaia/policy-evidence-navigation"
 
 export const runtime = "nodejs"
 export const metadata = {
@@ -41,12 +44,15 @@ export default async function PolicyEvidencePage({ searchParams }: { searchParam
   // Historical access must survive a failed current-proof gate. G performs no writes.
   const changePage = /^(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$/i.test(host)
     ? loadDecisionChangePage(process.cwd(), query.decisionRun, query.decision, query.evidenceRun) : null
+  const executivePage = loadExecutivePage(process.cwd(), briefPage, decisionPage, changePage)
   return (
     <article>
-      <header className="border-y-2 border-peat bg-surface px-4 py-10 sm:px-8 lg:px-12">
+      <ExecutiveEvidenceLayout page={executivePage}>
+      <header id="policy-evidence-detail" className="border-y-2 border-peat bg-surface px-4 py-10 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-6xl">
+          <BackToExecutiveSnapshot />
           <p className="font-mono text-sm">BUILD-001B — Human Review</p>
-          <h1 className="mt-4 font-display text-4xl leading-tight sm:text-6xl">GAIA Policy Evidence Proof</h1>
+          <h2 className="mt-4 font-display text-4xl leading-tight sm:text-6xl">GAIA Policy Evidence Proof</h2>
           <div className="mt-6 border-l-4 border-signal-strong pl-4">
             <ProvenanceLabel kind="synthetic" />
             <p className="mt-2 text-lg font-bold">Not real citizen testimony. Human judgment remains authoritative.</p>
@@ -56,8 +62,8 @@ export default async function PolicyEvidencePage({ searchParams }: { searchParam
       </header>
       {briefPage && decisionPage && <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8">
         <DecisionEvidenceBrief page={briefPage} />
-        <HumanDecisionPanel key={`${decisionPage.selection?.snapshotSha256}-${decisionPage.selection?.briefSha256}-${decisionPage.canRecord}`}
-          page={decisionPage} saveAction={saveDecisionAction} />
+        <div id="executive-decision-evidence"><HumanDecisionPanel key={`${decisionPage.selection?.snapshotSha256}-${decisionPage.selection?.briefSha256}-${decisionPage.canRecord}`}
+          page={decisionPage} saveAction={saveDecisionAction} /></div>
       </div>}
       {changePage && <div className="mx-auto max-w-6xl px-4 py-6 sm:px-8"><DecisionEvidenceChange page={changePage} /></div>}
       <div className="mx-auto max-w-6xl px-4 py-8 sm:px-8">
@@ -75,6 +81,8 @@ export default async function PolicyEvidencePage({ searchParams }: { searchParam
         <TrustSnapshotPanel key={`${loaded.runId}-${loaded.presentation.proofSha256}-${loaded.presentation.reviewRevision}`}
           page={loadSnapshotPage(process.cwd(), loaded.runId, loaded.presentation.proofSha256)} createAction={createSnapshotAction} />
       </div>}
+      <ExecutiveSourceEvidence page={executivePage} />
+      </ExecutiveEvidenceLayout>
     </article>
   )
 }

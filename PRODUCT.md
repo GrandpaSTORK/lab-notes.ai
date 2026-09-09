@@ -91,4 +91,11 @@ compares exactly four bindings, and preserves access when current evidence is
 different, invalid or unavailable. It does not decide whether the decision should
 change and writes no artifact. See `docs/builds/BUILD-001G.md`.
 
+BUILD-001H puts a read-only Executive Trust Evidence Snapshot first on the local
+route. Exact interpretation, saved review, frozen dissent, stored theme counts
+and associated decision/change context remain traceable to validated evidence.
+Presentation availability is not decision readiness. New leadership questions
+are labelled presentation prompts, never testimony or recommendations. It adds
+no model call, evidence artifact or authority. See `docs/builds/BUILD-001H.md`.
+
 The presentation layer is for everyone. Content uses plain English, avoids unexplained AI and government jargon, works across keyboard and assistive-technology navigation, and does not rely on colour alone. Meaningful interactive states have text and semantic equivalents, and all core content and actions remain available at 200% zoom.

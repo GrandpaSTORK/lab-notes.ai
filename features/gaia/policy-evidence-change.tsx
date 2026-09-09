@@ -1,10 +1,12 @@
 import type { ChangePage } from "@/lib/gaia/policy-evidence-change-store"
 import { SnapshotEvidence } from "./policy-evidence-snapshot"
+import { BackToExecutiveSnapshot } from "./policy-evidence-navigation"
 
 export function DecisionEvidenceChange({ page }: { page: ChangePage }) {
   const notice = page.notice, record = notice?.historicalRecord
   return <section id="decision-evidence-change" aria-labelledby="decision-change-title" className="min-w-0 border-y-2 border-peat py-6">
     <h2 id="decision-change-title" className="font-display text-3xl">BUILD-001G — Decision Evidence Change Notice</h2>
+    <BackToExecutiveSnapshot />
     <details className="mt-4"><summary className="min-h-11 cursor-pointer py-3 font-bold">Choose a saved historical decision</summary>
       <p>The initial selection is the first filename in the sorted run/decision inventory, not a judgment about priority or recency.</p>
       <ul className="mt-3 space-y-3">{page.choices.map((choice) => <li key={`${choice.runId}-${choice.decisionId}`}>
