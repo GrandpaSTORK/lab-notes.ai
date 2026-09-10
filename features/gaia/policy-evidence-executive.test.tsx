@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event"
 import { expect, it } from "vitest"
 import { blockedExecutive, EXECUTIVE_DISCLOSURE, MATCH_BOUNDARY, PRESENTATION_BOUNDARY, projectExecutiveSnapshot, QUESTION_BOUNDARY, THEME_BOUNDARY } from "@/lib/gaia/policy-evidence-executive"
 import { executiveFixture } from "@/lib/gaia/policy-evidence-executive.test-support"
+import { packagedDemo } from "@/lib/gaia/policy-evidence-demo.test-support"
 import { ExecutiveEvidenceLayout, ExecutiveSourceEvidence, ExecutiveTrustEvidence } from "./policy-evidence-executive"
 
 function fixture(state: "findings" | "zero" | "absent" = "findings") {
@@ -32,7 +33,7 @@ it("orients with computed count, exact interpretation, separate human review and
   expect(interpretation.getByRole("link", { name: "Why This Insight?" })).toHaveAttribute("href", "#decision-evidence-brief")
   const review = within(screen.getByRole("region", { name: "Executive human review" }))
   expect(review.getByText("HUMAN-REVIEWED")).toBeVisible()
-  expect(review.getByText("CONFIRM")).toBeVisible()
+  expect(review.getByText("Review disposition: CONFIRM")).toBeVisible()
   expect(review.getByText(f.snapshot.humanReview.scope)).toBeVisible()
   const dissent = within(screen.getByRole("region", { name: "Executive frozen dissent" }))
   expect(dissent.getByText("POTENTIAL_UNSEEN_DISSENT · SYN-0001")).toBeVisible()
@@ -99,10 +100,34 @@ it("shows PARTIAL for missing F/G while preserving valid core and avoiding fabri
   const f = fixture(), partial = projectExecutiveSnapshot(f.snapshotBytes, f.identity, f.bytes)
   render(<ExecutiveTrustEvidence page={partial} />)
   expect(screen.getByText("Presentation: PARTIAL.")).toBeVisible()
-  expect(screen.getByText(f.snapshot.modelInterpreted.originalMachineWording)).toBeVisible()
+  expect(within(screen.getByRole("region", { name: "Executive interpretation" })).getByText(f.snapshot.modelInterpreted.originalMachineWording)).toBeVisible()
   expect(screen.queryByText("RECORDED")).not.toBeInTheDocument()
   expect(screen.queryByText("RECORDED_EVIDENCE_MATCHES_CURRENT")).not.toBeInTheDocument()
   expect(screen.getAllByText("UNAVAILABLE")).toHaveLength(2)
+})
+it("puts exact sealed CAND-002 orientation before response details and clarifies review authority", () => {
+  const { executive: page } = packagedDemo()
+  const before = JSON.stringify(page)
+  render(<ExecutiveTrustEvidence page={page} />)
+  const orientation = screen.getByRole("region", { name: "Why this matters" })
+  expect(orientation.previousElementSibling?.lastElementChild).toHaveTextContent("The snapshot orients the leader. The evidence trail proves the snapshot.")
+  expect(orientation.nextElementSibling?.querySelector("section")).toBe(screen.getByRole("region", { name: "Executive interpretation" }))
+  const view = within(orientation)
+  expect(view.getByText("Current MODEL-INTERPRETED · CAND-002 interpretation")).toBeVisible()
+  const wording = "Recognition of training, support for a tool's aim, and welcome for a right to ask why coexist with concerns about whether staff and affected people can exercise meaningful judgment or secure an accountable response."
+  expect(page.core?.interpretation.wording).toBe(wording)
+  expect(view.getByText(wording)).toBeVisible()
+  expect(view.getByText("“The ambition is right and the timetable is not.”")).toBeVisible()
+  expect(view.getByText("POTENTIAL_UNSEEN_DISSENT")).toBeVisible()
+  expect(view.getByText("1 potential unseen dissent item remains unresolved.")).toBeVisible()
+  expect(view.getByText("Does the potential dissent materially affect this interpretation?")).toBeVisible()
+  expect(view.getByText("GAIA Decision Question / presentation prompt; not participant testimony or recommendation.")).toBeVisible()
+  const review = within(screen.getByRole("region", { name: "Executive human review" }))
+  expect(review.getByText("Review disposition: CONFIRM")).toBeVisible()
+  expect(review.getByText("Saved review state: CONFIRMED")).toBeVisible()
+  expect(review.getByText("This records the reviewer's disposition only. It does not confirm participant meaning, model correctness, or dissent materiality.")).toBeVisible()
+  expect(page.core?.humanReview.disposition).toBe("CONFIRM")
+  expect(JSON.stringify(page)).toBe(before)
 })
 it("shows BLOCKED without zero findings or inferred interpretation but retains the proof link", () => {
   render(<ExecutiveTrustEvidence page={blockedExecutive("Invalid or unavailable selected evidence, including dissent, blocks this view.")} />)

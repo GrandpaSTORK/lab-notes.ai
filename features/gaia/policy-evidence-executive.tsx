@@ -6,6 +6,7 @@ import { EXECUTIVE_AUTHORITY, EXECUTIVE_DISCLOSURE, EXECUTIVE_PRINCIPLE, MATCH_B
 /** Audience-facing projection only: no raw evidence bundle, serialized JSON, fingerprint or base64 view. */
 export function ExecutiveTrustEvidence({ page }: { page: ExecutivePage }) {
   const core = page.core
+  const dissentQuestion = core?.questions.find((question) => question.basis === "snapshot.unseenDissent.challenge.findings")
   return <section aria-labelledby="executive-title" className="border-y-2 border-peat bg-surface px-4 py-5 sm:px-8">
     <div className="mx-auto max-w-6xl">
       <header>
@@ -14,6 +15,27 @@ export function ExecutiveTrustEvidence({ page }: { page: ExecutivePage }) {
         <p className="mt-3 border-l-4 border-signal-strong pl-3 font-bold">{EXECUTIVE_DISCLOSURE}</p>
         <p className="mt-2 text-sm">{EXECUTIVE_PRINCIPLE}</p>
       </header>
+      {core && core.dissent.firstFinding && dissentQuestion && <section aria-labelledby="executive-why-title" className="mt-4 border-y-2 border-peat py-4">
+        <h2 id="executive-why-title" className="font-display text-2xl">Why this matters</h2>
+        <ol className="mt-3 grid gap-4 lg:grid-cols-[2fr_1fr_1fr]">
+          <li>
+            <h3 className="font-bold">1 — What the evidence appears to say</h3>
+            <p className="mt-1 font-mono text-xs">Current {core.interpretation.epistemicClass} · {core.candidateId} interpretation</p>
+            <p className="mt-2 whitespace-pre-wrap break-words">{core.interpretation.wording}</p>
+          </li>
+          <li>
+            <h3 className="font-bold">2 — What might qualify it</h3>
+            <blockquote className="mt-2 whitespace-pre-wrap break-words">“{core.dissent.firstFinding.quote}”</blockquote>
+            <p className="mt-2">{core.dissent.count} potential unseen dissent {core.dissent.count === 1 ? "item remains" : "items remain"} unresolved.</p>
+            <p className="mt-1 break-words font-mono text-xs">{core.dissent.firstFinding.status}</p>
+          </li>
+          <li>
+            <h3 className="font-bold">3 — What a human must decide next</h3>
+            <p className="mt-2">{dissentQuestion.text}</p>
+            <p className="mt-2 text-xs">GAIA Decision Question / presentation prompt; not participant testimony or recommendation.</p>
+          </li>
+        </ol>
+      </section>}
       {page.issue && <p role="alert" className="mt-5 border-2 border-peat p-4">{page.issue}</p>}
       {core && <>
         <div className="mt-4 grid gap-5 lg:grid-cols-[3fr_2fr]">
@@ -37,8 +59,9 @@ export function ExecutiveTrustEvidence({ page }: { page: ExecutivePage }) {
             <section aria-label="Executive human review" className="border-l-2 border-peat pl-4">
               <h2 className="font-bold">Human review</h2>
               <p className="font-mono text-xs">{core.humanReview.epistemicClass}</p>
-              <p className="font-bold">{core.humanReview.disposition ?? "No human disposition has been recorded."}</p>
-              <p className="text-sm">Saved state: {core.humanReview.state}</p>
+              <p className="font-bold">{core.humanReview.disposition ? `Review disposition: ${core.humanReview.disposition}` : "No human disposition has been recorded."}</p>
+              <p className="text-sm">Saved review state: {core.humanReview.state}</p>
+              <p className="mt-1 text-sm">This records the reviewer&apos;s disposition only. It does not confirm participant meaning, model correctness, or dissent materiality.</p>
               <p className="mt-1 text-sm">{core.humanReview.scope}</p>
               <a href="#brief-human-review" className="inline-flex min-h-11 items-center text-sm font-bold underline">Human Review</a>
             </section>
